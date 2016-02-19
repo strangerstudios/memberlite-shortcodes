@@ -30,7 +30,7 @@ function memberlite_tabs_shortcode($atts, $content = null) {
 		$result .= '<li';
 		if($item == $memberlite_active_tabs[count($memberlite_active_tabs)-1])
 			$result .= ' class="memberlite_active"';
-		$result .= '><a href="#tab-' . $item_id . '" data-toggle="tab">' . $item . '</a></li>';
+		$result .= '><a href="#tab-' . $item_id . '" data-toggle="tab" data-value="#' . $item_id . '">' . $item . '</a></li>';
 	}
 	$result .= '</ul><div class="memberlite_tab_content">';
     $content = str_replace("]<br />", ']', $content);
