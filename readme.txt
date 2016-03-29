@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Memberlite Shortcodes ===
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 3.0.1
