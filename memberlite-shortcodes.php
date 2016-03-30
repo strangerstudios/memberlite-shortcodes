@@ -20,7 +20,7 @@ function memberlitesc_init_styles()
 	//need jquery
 	wp_enqueue_script('jquery');
 	
-	wp_enqueue_style('memberlitesc_fontawesome', MEMBERLITESC_URL . "/font-awesome/css/font-awesome.min.css", array(), "4.4.0");
+	wp_enqueue_style('memberlite_fontawesome', MEMBERLITESC_URL . "/font-awesome/css/font-awesome.min.css", array(), "4.5.0");
 	wp_enqueue_script('memberlitesc_js', MEMBERLITESC_URL . "/js/memberlite-shortcodes.js", array( "jquery" ), MEMBERLITESC_VERSION, true);
 	wp_enqueue_style("memberlitesc_frontend", MEMBERLITESC_URL . "/css/memberlite-shortcodes.css", array(), MEMBERLITESC_VERSION);	
 }
