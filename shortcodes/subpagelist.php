@@ -20,6 +20,7 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 		'order'	=>	'ASC',
 		'post_parent' => $post->ID,
 		'show' => 'excerpt',
+		'show_children' => false,
 		'thumbnail' => false,
 	), $atts));
 	
@@ -27,7 +28,10 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 		$link = true;
 	else
 		$link = false;
-		
+
+	if($show_children == "0" || $show_children == "false" || $show_children == "no")
+		$show_children = false;
+				
 	if($thumbnail && strtolower($thumbnail) != "false")
 	{
 		if(strtolower($thumbnail) == "medium")
@@ -134,6 +138,14 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 				$r .= apply_filters('the_content', preg_replace("/\[memberlite_subpagelist[^\]]*\]/", "", get_the_content( '' )));						
 			else
 				$r .= '';
+				
+			if(!empty($show_children))
+			{
+				$r .= '<ul class="memberlite_subpagelist_children">';
+				$r .= '<li class="page_item page-item-' . $post->ID . '"><a href="' . get_permalink() . '" rel="bookmark">' . the_title('','',false) . '</a></li>';
+				$r .= wp_list_pages( array( 'child_of' => $post->ID, 'depth' => '-1', 'echo' => false, 'sort_column' => 'menu_order', 'title_li' => '' ) );
+				$r .= '</ul>';			
+			}
 			
 			if($link)
 			{
