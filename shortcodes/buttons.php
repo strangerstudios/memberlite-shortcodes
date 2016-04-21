@@ -14,7 +14,13 @@ function memberlite_btn_shortcode($atts, $content = null) {
 	if($style == 'link')
 		$r = '<a class="btn_link" href="' . $href . '" target="_' . $target . '">';
 	else
-		$r = '<a class="btn btn_' . $style . '" href="' . $href . '" target="_' . $target . '">';
+	{
+		$classes = explode(",", $style);
+		$newclasses = array();
+		foreach($classes as $class)
+			$newclasses[] = 'btn_'.trim($class);
+		$r = '<a class="btn ' . implode(' ', $newclasses) . '" href="' . $href . '" target="_' . $target . '">';
+	}
 	if(!empty($icon))
 		$r .= '<i class="fa fa-' . $icon . '"></i>';	
     $r .= $text;
