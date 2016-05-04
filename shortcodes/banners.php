@@ -15,7 +15,7 @@ function memberlite_banner_shortcode($atts, $content = null) {
 		$r = '<div class="banner" style="background-color: #' . $background . '">';
 	else
 		$r = '<div class="banner banner_' . $background . '">';
-	$r .= '<div class="row"><div class="medium-12';
+	$r .= '<div class="row"><div class="medium-12 columns';
 	if($align)
 		$r .= ' text-' . $align;
 	$r .= '"';
