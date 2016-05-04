@@ -17,9 +17,15 @@ function memberlite_recent_posts_shortcode_handler($atts, $content=null, $code="
 		'title' => NULL,
 		'subtitle' => NULL,
 		'show' => 'excerpt',
+		'show_avatar' => '1',
 		'category_id' => NULL
 	), $atts));
-			
+		
+	if($show_avatar == "0" || $show_avatar == "false" || $show_avatar == "no")
+		$show_avatar = false;
+	else
+		$show_avatar = true;
+
 	// our return string
 	$r = '<div class="memberlite_recent_posts">';
 		
@@ -54,7 +60,7 @@ function memberlite_recent_posts_shortcode_handler($atts, $content=null, $code="
 		$counter++;
 
 		$r .= '<div class="' . $colclass . ' columns ';
-		if ( has_post_thumbnail())
+		if ( has_post_thumbnail() || !empty($show_avatar) )
 		{
 			$r .= ' widget_has_thumbnail';
 		}
@@ -62,9 +68,17 @@ function memberlite_recent_posts_shortcode_handler($atts, $content=null, $code="
 
 		$r .= '<article id="post-' . get_the_ID() . '" class="' . implode(" ", get_post_class()) . '">';
 
-		if ( has_post_thumbnail()) 
+		if ( has_post_thumbnail() || !empty($show_avatar) ) 
 		{
-			$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_the_post_thumbnail($post->ID, 'mini') . '</a>';
+			if ( has_post_thumbnail() )
+			{
+				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_the_post_thumbnail($post->ID, 'mini') . '</a>';
+			}
+			else
+			{
+				$author_id = get_the_author_meta('id');
+				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_avatar( $author_id, 80 ) . '</a>';
+			}
 		}
 		elseif( 'video' == get_post_format() )
 			$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '"><i class="fa fa-video-camera"></i></a>';

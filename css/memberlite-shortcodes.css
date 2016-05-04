@@ -126,6 +126,7 @@ select.pmpro_error {background-image: none;}
 .memberlite_recent_posts .row {margin-top: 1em; }
 .memberlite_recent_posts .post-date {color: #AAA; }
 .memberlite_recent_posts .hentry {margin: 0; }
+.memberlite_recent_posts .entry-title {margin-bottom: 0; }
 
 .memberlite_recent_posts .widget_post_thumbnail {
 	display: block;
