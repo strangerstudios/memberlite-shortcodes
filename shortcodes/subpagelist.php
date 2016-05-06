@@ -73,8 +73,10 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 	$oldmore = $more;
 	$more = 0;
 
-	// the Loop		
-	foreach($memberlite_subpageposts_chunks as $row):
+	// the Loop
+	$nchunks = count($memberlite_subpageposts_chunks);		
+	for($i = 0; $i < $nchunks; $i++):
+		$row = $memberlite_subpageposts_chunks[$i];
 		$r .= '<div class="row">';
 		foreach($row as $post): 
 			setup_postdata($post);
@@ -160,9 +162,12 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 			$r .= '</div>'; //end columns		
 		
 			endforeach;
-		$r .= '</div><hr />'; //end row
-	
-	endforeach;
+		$r .= '</div>'; //end row
+		
+		if($i < $nchunks - 1)
+			$r .= "<hr />";
+		
+	endfor;
 
 	//Reset Query
 	wp_reset_query();
