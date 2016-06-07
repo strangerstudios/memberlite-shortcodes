@@ -14,7 +14,7 @@ function memberlite_signup_shortcode($atts, $content=null, $code="")
 
 	extract(shortcode_atts(array(
 		'level' => NULL,		
-		'title' => pmpro_getLevel($level)->name,
+		'title' => NULL,
 		'short' => NULL,
 		'intro' => NULL,
 		'submit_button' => "Sign Up Now"
@@ -24,6 +24,9 @@ function memberlite_signup_shortcode($atts, $content=null, $code="")
 	if($short == "0" || $short == "false" || $short == "no")
 		$short = false;
 	
+	if(empty($title))
+		$title = pmpro_getLevel($level)->name;
+		
 	global $current_user, $membership_levels;
 
 	ob_start();	

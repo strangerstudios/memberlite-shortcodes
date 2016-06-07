@@ -15,17 +15,6 @@
 	text-align: left;
 }
 
-/*
-.banner_body {background-color: #FFF; }
-.banner_primary {background-color: #2C3E50; }
-.banner_secondary {background-color: #18BC9C; }
-.banner_action {background-color: #F39C12; }
-#main .banner_primary, #main .banner_primary h1, #main .banner_primary h2, #main .banner_primary h3, #main .banner_primary h4, #main .banner_primary h5, #main .banner_primary a, #main .banner_primary a:link,
-#main .banner_secondary, #main .banner_secondary h1, #main .banner_secondary h2, #main .banner_secondary h3, #main .banner_secondary h4, #main .banner_secondary h5, #main .banner_secondary a, #main .banner_secondary a:link {
-	color: #FFF; 
-}
-*/
-
 /* [memberlite_btn] Shortcode */
 .btn,
 .btn:link {
@@ -125,7 +114,9 @@ select.pmpro_error {background-image: none;}
 .memberlite_recent_posts h1 {margin-bottom: .5em; }
 .memberlite_recent_posts .row {margin-top: 1em; }
 .memberlite_recent_posts .post-date {color: #AAA; }
+.banner .memberlite_recent_posts .post-date {color: #EEE; }
 .memberlite_recent_posts .hentry {margin: 0; }
+.memberlite_recent_posts .entry-title {margin-bottom: 0; }
 
 .memberlite_recent_posts .widget_post_thumbnail {
 	display: block;

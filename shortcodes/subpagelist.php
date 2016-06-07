@@ -46,7 +46,7 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 
 	// prep exclude array
 	$exclude = str_replace(" ", "", $exclude);
-	$exclude = explode(",", $exclude);
+	$exclude_array = explode(",", $exclude);
 		
 	// our return string
 	$r = "";
@@ -58,7 +58,7 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 		"orderby"=>$orderby,
 		"post_parent"=>$post_parent,
 		"order"=>$order,
-		"post__not_in"=>$exclude
+		"post__not_in"=>$exclude_array
 	);
 	$memberlite_subpageposts = get_posts($args);
 	
@@ -73,8 +73,10 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 	$oldmore = $more;
 	$more = 0;
 
-	// the Loop		
-	foreach($memberlite_subpageposts_chunks as $row):
+	// the Loop
+	$nchunks = count($memberlite_subpageposts_chunks);		
+	for($i = 0; $i < $nchunks; $i++):
+		$row = $memberlite_subpageposts_chunks[$i];
 		$r .= '<div class="row">';
 		foreach($row as $post): 
 			setup_postdata($post);
@@ -143,7 +145,7 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 			{
 				$r .= '<ul class="memberlite_subpagelist_children">';
 				$r .= '<li class="page_item page-item-' . $post->ID . '"><a href="' . get_permalink() . '" rel="bookmark">' . the_title('','',false) . '</a></li>';
-				$r .= wp_list_pages( array( 'child_of' => $post->ID, 'depth' => '-1', 'echo' => false, 'sort_column' => 'menu_order', 'title_li' => '' ) );
+				$r .= wp_list_pages( array( 'child_of' => $post->ID, 'depth' => '-1', 'echo' => false, 'exclude' => $exclude, 'sort_column' => 'menu_order', 'title_li' => '' ) );
 				$r .= '</ul>';			
 			}
 			
@@ -160,9 +162,12 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 			$r .= '</div>'; //end columns		
 		
 			endforeach;
-		$r .= '</div><hr />'; //end row
-	
-	endforeach;
+		$r .= '</div>'; //end row
+		
+		if($i < $nchunks - 1)
+			$r .= "<hr />";
+		
+	endfor;
 
 	//Reset Query
 	wp_reset_query();
