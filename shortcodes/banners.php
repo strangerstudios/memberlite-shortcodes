@@ -25,7 +25,7 @@ function memberlite_banner_shortcode($atts, $content = null) {
 		$r .= ' style="color: #' . $color . '"';
 	$r .= '>';
 	$r .= '<h2>' . $title . '</h2>';
-    $r .= wpautop($content);
+    $r .= apply_filters('the_content', $content);
     $r .= '</div></div></div>';
     return $r;
 }

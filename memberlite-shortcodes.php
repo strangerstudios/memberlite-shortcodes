@@ -33,7 +33,6 @@ require_once(MEMBERLITESC_DIR . "/shortcodes/banners.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/buttons.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/columns.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/font-awesome.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/levels.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/messages.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/recent_posts.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/signup.php");
