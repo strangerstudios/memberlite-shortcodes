@@ -152,7 +152,7 @@ select.pmpro_error {background-image: none;}
 /* [memberlite_signup] Shortcode */
 form.memberlite_signup label, form.pmpro_signup_form label {float: none; margin: 0; width: auto; display: block; text-align: left; }
 form.memberlite_signup input[type=text], form.memberlite_signup input[type=email], form.memberlite_signup input[type=password], form.pmpro_signup_form input[type=text], form.pmpro_signup_form input[type=email], form.pmpro_signup_form input[type=password]
- {width: 100%; }
+ {max-width: 100%; width: 100%; }
 form.memberlite_signup .pmpro_btn, form.pmpro_signup_form .pmpro_btn {display: block; width: 100%; }
 
 /* [memberlite_subpagelist] Shortcode */
