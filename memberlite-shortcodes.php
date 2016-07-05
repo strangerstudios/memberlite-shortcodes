@@ -38,3 +38,21 @@ require_once(MEMBERLITESC_DIR . "/shortcodes/recent_posts.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/signup.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/subpagelist.php");
 require_once(MEMBERLITESC_DIR . "/shortcodes/tabs.php");
+
+/*
+	Sometimes if two shortcodes bump up against one another, WP will autop it and we don't want that.
+*/
+function memberlitesc_the_content_unautop($content) {
+	$shortcodes = array(
+		'memberlite_banner',
+	);		
+	
+	foreach($shortcodes as $shortcode) {
+		$content = preg_replace("/<br \/>\s*\[" . $shortcode . "/ms", "[" . $shortcode, $content);
+		$content = preg_replace("/<p\>\[" . $shortcode . "/ms", "[" . $shortcode, $content);
+		$content = preg_replace("/\[\/" . $shortcode . "\]<\/p>/ms", "[/" . $shortcode . "]", $content);
+	}
+		
+	return $content;
+}
+add_action('the_content', 'memberlitesc_the_content_unautop');
