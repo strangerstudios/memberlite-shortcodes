@@ -16,8 +16,9 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 		'exclude' => NULL,
 		'layout' => NULL,
 		'link' => true,
-		'orderby'	=> 'menu_order',
-		'order'	=>	'ASC',
+		'link_text' => '(more...)',
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
 		'post_parent' => $post->ID,
 		'show' => 'excerpt',
 		'show_children' => false,
@@ -34,12 +35,15 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 				
 	if($thumbnail && strtolower($thumbnail) != "false")
 	{
+		/*if(strtolower($thumbnail) == "icon")
+			$thumbnail = "icon";
 		if(strtolower($thumbnail) == "medium")
 			$thumbnail = "medium";
 		elseif(strtolower($thumbnail) == "large")
 			$thumbnail = "large";
 		else
 			$thumbnail = "thumbnail";
+		*/
 	}
 	else
 		$thumbnail = false;
@@ -92,16 +96,37 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 			$r .= ' columns">';
 			$r .= '<article id="post-' . get_the_ID() . '" class="' . implode(" ", get_post_class()) . ' memberlite_subpagelist_item">';
 		
-			if ( has_post_thumbnail() && empty($layout) && !empty($thumbnail))
+			if ( has_post_thumbnail() && empty($layout) && !empty($thumbnail) && $thumbnail !== "icon")
 			{
 				if($layout == '3col' || $layout == '4col')
 					$thumbnail_class = "aligncenter";
 				else
-					$thumbnail_class = "alignright";		
+					$thumbnail_class = "alignright";	
 				if($link)
 					$r .= '<a href="' . get_permalink() . '">' . get_the_post_thumbnail($post->ID, $thumbnail, array('class' => $thumbnail_class )) . '</a>';
 				else
 					$r .= get_the_post_thumbnail($post->ID, $thumbnail, array('class' => $thumbnail_class) );
+			}
+			
+			if($thumbnail == "icon")
+			{
+				$memberlite_page_icon = get_post_meta($post->ID, '_memberlite_page_icon', true);
+				if(!empty($memberlite_page_icon))
+				{
+					$r .= '<div class="row">';
+					if($layout == '3col' || $layout == '4col')
+						$r .= '<div class="large-12 text-center columns">';
+					else
+						$r .= '<div class="large-2 text-center columns">';
+					if($link)
+						$r .= '<a href="' . get_permalink() . '"><i class="fa fa-5x fa-' . $memberlite_page_icon . '"></i></a>';
+					else
+						$r .= '<i class="fa fa-5x fa-' . $memberlite_page_icon . '"></i>';
+					if($layout == '3col' || $layout == '4col')
+						$r .= '</div><div class="row"><div class="large-12 columns">';
+					else
+						$r .= '</div><div class="large-10 columns">';
+				}
 			}
 			
 			$r .= '<header class="entry-header">';
@@ -122,7 +147,7 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 			$r .= '</header>';		
 			$r .= '<div class="entry-content">';		
 	
-			if ( has_post_thumbnail() && !empty($layout) && !empty($thumbnail)) 
+			if ( has_post_thumbnail() && !empty($layout) && !empty($thumbnail) && $thumbnail !== "icon") 
 			{			
 				if($layout == '3col' || $layout == '4col')
 					$thumbnail_class = "aligncenter";
@@ -152,11 +177,14 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 			if($link)
 			{
 				$r .= '<a class="more-link" href="' . get_permalink() . '" rel="bookmark">';
-				$r .= __('(more...)','memberlite');
+				$r .= $link_text;
 				$r .= '</a>';
 			}
-									
-			$r .= '</div>';
+								
+			$r .= '</div>'; //end entry-content
+			
+			if(!empty($memberlite_page_icon))
+				$r .= '</div></div>'; //end inner columns and row
 				
 			$r .= '</article>';
 			$r .= '</div>'; //end columns		
