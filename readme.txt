@@ -2,8 +2,8 @@
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 3.0.1
-Tested up to: 4.4
-Stable tag: 0.1
+Tested up to: 4.5.3
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -52,5 +52,5 @@ Coming soon.
 
 == Changelog ==
 
-= 0.1 =
+= 1.0 =
 Initial Release
