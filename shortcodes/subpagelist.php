@@ -205,7 +205,7 @@ function memberlitesc_subpagelist_shortcode_handler($atts, $content=null, $code=
 	
 	return $r;
 }
-
+remove_shortcode('memberlite_subpagelist');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_subpagelist', 'memberlitesc_subpagelist_shortcode_handler');
 
 function memberlitesc_remove_subpagelist_from_excerpt($excerpt)

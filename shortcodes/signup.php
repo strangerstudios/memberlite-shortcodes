@@ -112,4 +112,5 @@ function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 	ob_end_clean();
 	return $temp_content;
 }
+remove_shortcode('memberlite_signup');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode("memberlite_signup", "memberlitesc_signup_shortcode");

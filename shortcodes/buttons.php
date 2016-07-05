@@ -27,4 +27,5 @@ function memberlitesc_btn_shortcode($atts, $content = null) {
     $r .= '</a>';
     return $r;
 }
+remove_shortcode('memberlite_btn');
 add_shortcode('memberlite_btn', 'memberlitesc_btn_shortcode');

@@ -121,5 +121,5 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 
 	return $r;
 }
-
+remove_shortcode('memberlite_recent_posts');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_recent_posts', 'memberlitesc_recent_posts_shortcode_handler');

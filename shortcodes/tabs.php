@@ -39,6 +39,7 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
     $result .= '</div></div>';
     return force_balance_tags($result);
 }
+remove_shortcode('memberlite_tabs');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_tabs', 'memberlitesc_tabs_shortcode');
 
 function memberlitesc_tab_shortcode($atts, $content = null) {

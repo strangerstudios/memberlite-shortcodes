@@ -15,8 +15,7 @@ define('MEMBERLITESC_VERSION', '1.0');
 /*
 	Enqueue Stylesheets and Javascript
 */
-function memberlitesc_init_styles()
-{	
+function memberlitesc_init_styles() {
 	//need jquery
 	wp_enqueue_script('jquery');
 	
@@ -28,17 +27,22 @@ add_action("wp_enqueue_scripts", "memberlitesc_init_styles");
 
 /*
 	Load all Shortcodes
+	
+	Note we load on init with priority 20 here so we load after shortcodes that might still be around from Memberlite 2.0 and prior.
 */
-require_once(MEMBERLITESC_DIR . "/shortcodes/banners.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/buttons.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/columns.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/font-awesome.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/messages.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/recent_posts.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/signup.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/subpagelist.php");
-require_once(MEMBERLITESC_DIR . "/shortcodes/tabs.php");
-
+function memberlitesc_init_shortcodes() {
+	require_once(MEMBERLITESC_DIR . "/shortcodes/banners.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/buttons.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/columns.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/font-awesome.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/messages.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/recent_posts.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/signup.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/subpagelist.php");
+	require_once(MEMBERLITESC_DIR . "/shortcodes/tabs.php");
+}
+add_action('init', 'memberlitesc_init_shortcodes', 20);
+	
 /*
 	Sometimes if two shortcodes bump up against one another, WP will autop it and we don't want that.
 */

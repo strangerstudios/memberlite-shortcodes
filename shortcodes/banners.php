@@ -29,4 +29,5 @@ function memberlitesc_banner_shortcode($atts, $content = null) {
     $r .= '</div></div></div>';
     return $r;
 }
+remove_shortcode('memberlite_banner');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_banner', 'memberlitesc_banner_shortcode');

@@ -21,4 +21,5 @@ function memberlitesc_fa_shortcode($atts, $content = null) {
 	$r .= '"></i>';
     return $r;
 }
+remove_shortcode('fa');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('fa', 'memberlitesc_fa_shortcode');

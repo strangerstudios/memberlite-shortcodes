@@ -16,6 +16,10 @@ function memberlitesc_row_shortcode($atts, $content = null) {
     $result .= '</div>';
     return force_balance_tags($result);
 }
+remove_shortcode('row');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
+remove_shortcode('row_row');
+remove_shortcode('row_row_row');
+remove_shortcode('row_row_row_row_your_boat');
 add_shortcode('row', 'memberlitesc_row_shortcode');
 add_shortcode('row_row', 'memberlitesc_row_shortcode');
 add_shortcode('row_row_row', 'memberlitesc_row_shortcode');
@@ -46,6 +50,10 @@ function memberlitesc_col_shortcode($atts, $content = null) {
     $result .= '</div>';
     return force_balance_tags($result);
 }
+remove_shortcode('col');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
+remove_shortcode('col_col');
+remove_shortcode('col_col_col');
+remove_shortcode('col_col_col_me_maybe');
 add_shortcode('col', 'memberlitesc_col_shortcode');
 add_shortcode('col_col', 'memberlitesc_col_shortcode');
 add_shortcode('col_col_col', 'memberlitesc_col_shortcode');

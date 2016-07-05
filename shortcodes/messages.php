@@ -12,4 +12,5 @@ function memberlitesc_msg_shortcode($atts, $content = null) {
     $r .= '</p>';
     return $r;
 }
+remove_shortcode('memberlite_msg');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_msg', 'memberlitesc_msg_shortcode');
