@@ -12,7 +12,6 @@ jQuery( document ).ready(function() {
 	var tab, tabarea;
 	tab = jQuery(this).attr('href').replace(/#/, '');
 	tabarea = jQuery(this).closest('.memberlite_tabbable');
-	console.log(tab);
 	
 	//hide all tab panes
 	tabarea.find('.memberlite_tab_pane').hide();
