@@ -4,7 +4,7 @@
  *
  * @param array $args Configuration arguments.
  */
-function memberlite_recent_posts_shortcode_handler($atts, $content=null, $code="") {
+function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code="") {
 	global $post;
 	
 	// $atts    ::= array of attributes
@@ -122,4 +122,4 @@ function memberlite_recent_posts_shortcode_handler($atts, $content=null, $code="
 	return $r;
 }
 
-add_shortcode('memberlite_recent_posts', 'memberlite_recent_posts_shortcode_handler');
+add_shortcode('memberlite_recent_posts', 'memberlitesc_recent_posts_shortcode_handler');

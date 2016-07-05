@@ -1,6 +1,6 @@
 <?php
 // Tabs Content Wrapper
-function memberlite_tabs_shortcode($atts, $content = null) {
+function memberlitesc_tabs_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [memberlite_tabs class="text-center" items="Tab 1, Tab 2, Tab 3"][/tabs]
@@ -39,9 +39,9 @@ function memberlite_tabs_shortcode($atts, $content = null) {
     $result .= '</div></div>';
     return force_balance_tags($result);
 }
-add_shortcode('memberlite_tabs', 'memberlite_tabs_shortcode');
+add_shortcode('memberlite_tabs', 'memberlitesc_tabs_shortcode');
 
-function memberlite_tab_shortcode($atts, $content = null) {
+function memberlitesc_tab_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [memberlite_tab class="text-center" item="Tab 1"]
@@ -59,4 +59,4 @@ function memberlite_tab_shortcode($atts, $content = null) {
     $result .= '</div>';
     return force_balance_tags($result);
 }
-add_shortcode('memberlite_tab', 'memberlite_tab_shortcode');
+add_shortcode('memberlite_tab', 'memberlitesc_tab_shortcode');

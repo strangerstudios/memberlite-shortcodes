@@ -1,5 +1,5 @@
 <?php
-function memberlite_msg_shortcode($atts, $content = null) {
+function memberlitesc_msg_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [memberlite_msg style="success" text="You did it!"]
@@ -12,4 +12,4 @@ function memberlite_msg_shortcode($atts, $content = null) {
     $r .= '</p>';
     return $r;
 }
-add_shortcode('memberlite_msg', 'memberlite_msg_shortcode');
+add_shortcode('memberlite_msg', 'memberlitesc_msg_shortcode');

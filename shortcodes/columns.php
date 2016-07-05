@@ -2,7 +2,7 @@
 /* Adapted from https://github.com/wp-plugins/easy-foundation-shortcodes/blob/master/shortcode/wpcolumns/plugin_shortcode.php */
 
 // Rows
-function memberlite_row_shortcode($atts, $content = null) {
+function memberlitesc_row_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [row class="examples"]
@@ -16,13 +16,13 @@ function memberlite_row_shortcode($atts, $content = null) {
     $result .= '</div>';
     return force_balance_tags($result);
 }
-add_shortcode('row', 'memberlite_row_shortcode');
-add_shortcode('row_row', 'memberlite_row_shortcode');
-add_shortcode('row_row_row', 'memberlite_row_shortcode');
-add_shortcode('row_row_row_your_boat', 'memberlite_row_shortcode');
+add_shortcode('row', 'memberlitesc_row_shortcode');
+add_shortcode('row_row', 'memberlitesc_row_shortcode');
+add_shortcode('row_row_row', 'memberlitesc_row_shortcode');
+add_shortcode('row_row_row_your_boat', 'memberlitesc_row_shortcode');
 
 //Columns
-function memberlite_col_shortcode($atts, $content = null) {
+function memberlitesc_col_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [col large="3" medium="6" large_offset="3"]
@@ -46,7 +46,7 @@ function memberlite_col_shortcode($atts, $content = null) {
     $result .= '</div>';
     return force_balance_tags($result);
 }
-add_shortcode('col', 'memberlite_col_shortcode');
-add_shortcode('col_col', 'memberlite_col_shortcode');
-add_shortcode('col_col_col', 'memberlite_col_shortcode');
-add_shortcode('col_col_col_me_maybe', 'memberlite_col_shortcode');
+add_shortcode('col', 'memberlitesc_col_shortcode');
+add_shortcode('col_col', 'memberlitesc_col_shortcode');
+add_shortcode('col_col_col', 'memberlitesc_col_shortcode');
+add_shortcode('col_col_col_me_maybe', 'memberlitesc_col_shortcode');

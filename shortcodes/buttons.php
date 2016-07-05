@@ -1,5 +1,5 @@
 <?php
-function memberlite_btn_shortcode($atts, $content = null) {
+function memberlitesc_btn_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [memberlite_btn style="success" href="http://www.paidmembershipspro.com" text="Paid Memberships Pro" icon="info"]
@@ -27,4 +27,4 @@ function memberlite_btn_shortcode($atts, $content = null) {
     $r .= '</a>';
     return $r;
 }
-add_shortcode('memberlite_btn', 'memberlite_btn_shortcode');
+add_shortcode('memberlite_btn', 'memberlitesc_btn_shortcode');

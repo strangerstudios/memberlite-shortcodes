@@ -5,7 +5,7 @@
 	This shortcode will show a signup form. It will only show user account fields.
 	If the level is not free, the user will have to enter the billing information on the checkout page.	
 */
-function memberlite_signup_shortcode($atts, $content=null, $code="")
+function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
@@ -112,4 +112,4 @@ function memberlite_signup_shortcode($atts, $content=null, $code="")
 	ob_end_clean();
 	return $temp_content;
 }
-add_shortcode("memberlite_signup", "memberlite_signup_shortcode");
+add_shortcode("memberlite_signup", "memberlitesc_signup_shortcode");

@@ -1,5 +1,5 @@
 <?php
-function memberlite_banner_shortcode($atts, $content = null) {
+function memberlitesc_banner_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [memberlite_banner align="center" background="primary" color="#FFFFFF" title="Banner Title"]
@@ -29,4 +29,4 @@ function memberlite_banner_shortcode($atts, $content = null) {
     $r .= '</div></div></div>';
     return $r;
 }
-add_shortcode('memberlite_banner', 'memberlite_banner_shortcode');
+add_shortcode('memberlite_banner', 'memberlitesc_banner_shortcode');

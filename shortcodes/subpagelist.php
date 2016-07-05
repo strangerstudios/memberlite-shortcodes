@@ -4,7 +4,7 @@
  *
  * @param array $args Configuration arguments.
  */
-function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code="") {
+function memberlitesc_subpagelist_shortcode_handler($atts, $content=null, $code="") {
 	global $post;
 	
 	// $atts    ::= array of attributes
@@ -206,11 +206,11 @@ function memberlite_subpagelist_shortcode_handler($atts, $content=null, $code=""
 	return $r;
 }
 
-add_shortcode('memberlite_subpagelist', 'memberlite_subpagelist_shortcode_handler');
+add_shortcode('memberlite_subpagelist', 'memberlitesc_subpagelist_shortcode_handler');
 
-function memberlite_remove_subpagelist_from_excerpt($excerpt)
+function memberlitesc_remove_subpagelist_from_excerpt($excerpt)
 {
 	$excerpt = preg_replace("/\[subpagelist[^\]]*\]/", "", $excerpt);
 	return $excerpt;
 }
-add_filter("the_excerpt", "memberlite_remove_subpagelist_from_excerpt");
+add_filter("the_excerpt", "memberlitesc_remove_subpagelist_from_excerpt");

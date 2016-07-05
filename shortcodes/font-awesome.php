@@ -1,5 +1,5 @@
 <?php
-function memberlite_fa_shortcode($atts, $content = null) {
+function memberlitesc_fa_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
 	// examples: [fa icon="comment" color="primary" size="3x"]
@@ -21,4 +21,4 @@ function memberlite_fa_shortcode($atts, $content = null) {
 	$r .= '"></i>';
     return $r;
 }
-add_shortcode('fa', 'memberlite_fa_shortcode');
+add_shortcode('fa', 'memberlitesc_fa_shortcode');
