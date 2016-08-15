@@ -11,40 +11,69 @@ A set of shortcodes designed enhance the appearance of your content with the Mem
 
 == Description ==
 
-For sites running the Memberlite Theme or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
+For sites running the [Memberlite Theme](http://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
 
-Memberlite(http://www.memberlitetheme.com) is an easy to customize theme designed for Membership websites. It offers native integration and support for plugins including Paid Memberships Pro, bbPress, Events Manager, WooCommerce, and Testimonials Widget.
+[Memberlite](http://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
 
-= Included Shortcodes =
-[memberlite_banner] for formatted banners. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/banners/)
+= [memberlite_banner] Shortcode =
+Create fluid-width banners to divide and highlight sections of content. You can define the background as an included theme color (primary, secondary, action, or body) or any hex color. [more info](http://memberlitetheme.com/memberlite-shortcodes/banners/)
 
-[memberlite_btn] for formatted buttons. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/buttons/)
+= [memberlite_btn] Shortcode =
+Add formatted buttons with the link URL, target, color, size, and optional icon. [more info](http://memberlitetheme.com/memberlite-shortcodes/buttons/)
 
-[row] and [column] for formatting text in responsive columns. [docs](http://memberlitetheme.com/memberlite-shortcodes/column-shortcodes/)
+= [row] and [col] Shortcodes =
+Format your content in responsive columns based on a 12 column grid. You can nest columns by using the [row_row] and [col_col] shortcodes. [more info](http://memberlitetheme.com/memberlite-shortcodes/column-shortcodes/)
 
-[fa] for Font Awesome icons. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/font-awesome-icons/)
+= [fa] Shortcode =
+Easily add any Font Awesome icon using this simple shortcode. [more info](http://memberlitetheme.com/memberlite-shortcodes/font-awesome-icons/)
 
-[memberlite_signup] to display a block with signup fields for a specific membership level. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/membership-signup-block/)
+= [memberlite_signup] Shortcode =
+If you're using [Paid Memberships Pro](http://www.paidmembershipspro.com), this shortcode will display a block with signup fields for a specific membership level. [more info](http://memberlitetheme.com/memberlite-shortcodes/membership-signup-block/)
 
-[memberlite_msg] for contextual message blocks. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/contextual-messages/)
+= [memberlite_msg] Shortcode =
+Insert a stylized contextual message block with styling for default, info, alert, error, or a success message. [more info](http://memberlitetheme.com/memberlite-shortcodes/contextual-messages/)
 
-[memberlite_recent_posts] designed to be used on the homepage and outputs the newest posts overall or in a defined category. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/recent-posts/)
+= [memberlite_recent_posts] Shortcode =
+Designed to be used on the homepage, this shortcode displays the newest posts or a defined category of posts accoriding to your shortcode settings. [more info](http://memberlitetheme.com/memberlite-shortcodes/recent-posts/)
 
-[memberlite_subpagelist] to show a list of a given pages' subpages in the order you define. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/subpagelist/)
+= [memberlite_subpagelist] Shortcode =
+Easily create a digest view of a given pages' subpages, with an excerpt or the full page content, in the order you define. [more info](http://memberlitetheme.com/memberlite-shortcodes/subpagelist/)
 
-[memberlite_tabs] and [memberlite_tab] for tabbed content blocks. [docs](http://www.memberlitetheme.com/memberlite-shortcodes/tabs/)
+= [memberlite_tabs] and [memberlite_tab] Shortcode =
+Add a tabbed content block with this simple shortcode. [more info](http://memberlitetheme.com/memberlite-shortcodes/tabs/)
 
-Full documentation on all included shortcodes can be found at http://www.memberlitetheme.com/memberlite-shortcodes/=
+Full documentation on all included shortcodes can be found at [the Memberlite Theme homepage](http://memberlitetheme.com/memberlite-shortcodes/)
 
-= Installation ==
+== Installation ==
 
-1. Upload the plugin files to the `/wp-content/memberlite-shortcodes` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-1. Add shortcodes to pages, posts and widgets. [View Docs](http://www.memberlitetheme.com/memberlite-shortcodes/)
+= Download, Install and Activate =
+In your WordPress admin, go to Plugins > Add New to install Memberlite Shortcodes, or:
 
+1. Download the latest version of the plugin.
+2. Unzip the downloaded file to your computer.
+3. Upload the /memberlite-shortcodes/ directory to the /wp-content/plugins/ directory of your site.
+4. Activate the plugin through the 'Plugins' menu in WordPress.
+
+= Start Using the Shortcodes! =
+Browse the Memberlite Shortcodes documentation to see all shortcodes, their attributes, and to view sample shortcode demos.
+
+[View Documentation](http://memberlitetheme.com/memberlite-shortcodes/)
+
+== Screenshots ==
+1. Demo of the Recent Posts shortcode [memberlite_recent_posts] with featured images, excerpts, and a three-column layout.
+2. Demo of the [memberlite_subpagelist] shortcode in a column layout and demo of the [fa] icons.
+3. Demo of the [memberlite_signup] shortcode for a Paid Memberships Pro membership level in a two-column layout using the [memberlite_banner] with the "body" background.
+ 
 == Frequently Asked Questions ==
 
-Coming soon.
+= Where can I find Memberlite Shortcodes documentation and user guides? =
+For help setting up and configuring the Memberlite Shortcodes plugin, please refer to [documentation](http://memberlitetheme.com/memberlite-shortcodes/).
+
+= Where can I get the Memberlite Theme? =
+[Visit http://memberlitetheme.com](http://memberlitetheme.com/memberlite-shortcodes/) to get your copy of the Memberlite Theme.
+
+= I'm not using the Memberlite Theme - can I still use Memberlite Shortcodes plugin? =
+Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
 
