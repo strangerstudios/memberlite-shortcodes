@@ -70,7 +70,7 @@ Browse the Memberlite Shortcodes documentation to see all shortcodes, their attr
 For help setting up and configuring the Memberlite Shortcodes plugin, please refer to [documentation](http://memberlitetheme.com/memberlite-shortcodes/).
 
 = Where can I get the Memberlite Theme? =
-[Visit http://memberlitetheme.com](http://memberlitetheme.com/memberlite-shortcodes/) to get your copy of the Memberlite Theme.
+Visit http://memberlitetheme.com to get your copy of the Memberlite Theme.
 
 = I'm not using the Memberlite Theme - can I still use Memberlite Shortcodes plugin? =
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
