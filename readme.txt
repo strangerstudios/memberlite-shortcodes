@@ -77,5 +77,8 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
+= 1.1 =
+* BUG: Removed empty <h2></h2> when no title defined for banner shortcode.
+
 = 1.0 =
 Initial Release

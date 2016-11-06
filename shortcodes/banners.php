@@ -24,7 +24,8 @@ function memberlitesc_banner_shortcode($atts, $content = null) {
 	elseif(preg_match('/^[a-f0-9]{6}$/i', $color))
 		$r .= ' style="color: #' . $color . '"';
 	$r .= '>';
-	$r .= '<h2>' . $title . '</h2>';
+	if(!empty($title))
+		$r .= '<h2>' . $title . '</h2>';
     $r .= apply_filters('the_content', $content);
     $r .= '</div></div></div>';
     return $r;
