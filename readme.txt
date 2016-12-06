@@ -1,9 +1,9 @@
 === Memberlite Shortcodes ===
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
-Requires at least: 3.5
-Tested up to: 4.5.3
-Stable tag: 1.0
+Requires at least: 4.0
+Tested up to: 4.7
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,8 +77,9 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
-= 1.1 =
+= 1.0.1 =
 * BUG: Removed empty <h2></h2> when no title defined for banner shortcode.
+* BUG: Now using plugins_url to avoid http/https issues.
 
 = 1.0 =
 Initial Release

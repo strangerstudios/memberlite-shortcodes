@@ -3,14 +3,14 @@
 Plugin Name: Memberlite Shortcodes
 Plugin URI: http://www.memberlitetheme.com/plugins/memberlite-shortcodes/
 Description: Shortcodes designed to work with the Memberlite Theme and Memberlite Child Themes.
-Version: 1.0
+Version: 1.0.1
 Author: kimannwall, strangerstudios
 Author URI: http://www.memberlitetheme.com
 */
 
 define('MEMBERLITESC_DIR', dirname(__FILE__) );
-define('MEMBERLITESC_URL', WP_PLUGIN_URL . "/memberlite-shortcodes");
-define('MEMBERLITESC_VERSION', '1.0');
+define('MEMBERLITESC_URL', plugins_url('/memberlite-shortcodes', __FILE__));
+define('MEMBERLITESC_VERSION', '1.0.1');
 
 /*
 	Enqueue Stylesheets and Javascript
