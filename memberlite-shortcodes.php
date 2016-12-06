@@ -9,7 +9,7 @@ Author URI: http://www.memberlitetheme.com
 */
 
 define('MEMBERLITESC_DIR', dirname(__FILE__) );
-define('MEMBERLITESC_URL', plugins_url('/memberlite-shortcodes', __FILE__));
+define('MEMBERLITESC_URL', plugins_url('', __FILE__));
 define('MEMBERLITESC_VERSION', '1.0.1');
 
 /*
