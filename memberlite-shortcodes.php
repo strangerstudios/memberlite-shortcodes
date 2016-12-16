@@ -37,7 +37,8 @@ function memberlitesc_init_shortcodes() {
 	require_once(MEMBERLITESC_DIR . "/shortcodes/font-awesome.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/messages.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/recent_posts.php");
-	require_once(MEMBERLITESC_DIR . "/shortcodes/signup.php");
+	if(defined('PMPRO_VERSION'))
+		require_once(MEMBERLITESC_DIR . "/shortcodes/signup.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/subpagelist.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/tabs.php");
 }

@@ -76,6 +76,8 @@ Visit http://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
+= 1.0.2 =
+* BUG: Now checking that PMPro is active before requiring memberlite_signup shortcode.
 
 = 1.0.1 =
 * BUG: Removed empty <h2></h2> when no title defined for banner shortcode.
