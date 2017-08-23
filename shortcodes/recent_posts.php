@@ -76,7 +76,7 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 			}
 			else
 			{
-				$author_id = get_the_author_meta('id');
+				$author_id = get_the_author_meta('ID');
 				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_avatar( $author_id, 80 ) . '</a>';
 			}
 		}
