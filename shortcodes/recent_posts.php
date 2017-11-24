@@ -13,6 +13,8 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 	// examples: [memberlite_recent_posts title="Recent Posts" show="none" category_id="2"]
 	
 	extract(shortcode_atts(array(
+		'post_type' => 'post',
+		'author_id' => NULL,
 		'count' => '3',
 		'title' => NULL,
 		'subtitle' => NULL,
@@ -20,20 +22,65 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 		'show_avatar' => '1',
 		'category_id' => NULL
 	), $atts));
-		
-	if($show_avatar == "0" || $show_avatar == "false" || $show_avatar == "no")
+
+	// load default query args array.
+	$query_args = array(
+		'post_type' => $post,
+		'posts_per_page' => $count,
+		'ignore_sticky_posts' => true,
+		'author' => $author_id,
+	);
+	
+	// check to see if post type is not empty and the post type exists.
+	if( !empty($post_type) && post_type_exists( $post_type ) ) {
+		$query_args['post_type'] = $post_type;
+	}else{
+		return _e( "There was a problem fetching content for the post type '$post_type'. Please ensure this exists.", "memberlite-shortcodes" );
+	}
+
+	if($show_avatar == "0" || $show_avatar == "false" || $show_avatar == "no"){
 		$show_avatar = false;
-	else
+	}else{
 		$show_avatar = true;
+	}
+
+	// check to see if the author_id is current.
+	if( $author_id === 'current' && !empty( $author_id ) ) {
+		global $current_user;
+
+		if( empty( $current_user->ID) ) {
+			return _e( 'There was a problem fetching posts for the current user. Please try again later.', 'memberlite-shortcodes' );
+		}else{
+			$query_args['author'] = $current_user->ID;
+		}	
+	}
+
+	// If author_id is not numeric, try and get the user's ID from their name.
+	if( $author_id != 'current' && !is_numeric( $author_id ) && !empty( $author_id ) ) {
+		$user = get_user_by( 'login', $author_id );
+
+		$author_id = $user->ID;
+
+		if( empty( $author_id ) ) {
+			return __( "No posts found for this user. Please ensure the author's name/ID is correct.", 'memberlite-shortcodes' );
+		}else{
+			$query_args['author'] = $author_id;
+		}
+	}
 
 	// our return string
 	$r = '<div class="memberlite_recent_posts">';
 		
 	// get posts
-	if(!empty($category_id))
-		query_posts(array("post_type"=>"post", "posts_per_page"=>$count, "ignore_sticky_posts"=>true, "cat"=>$category_id));
-  	else
-		query_posts(array("post_type"=>"post", "posts_per_page"=>$count, "ignore_sticky_posts"=>true,));
+	if( !empty( $category_id ) ) {
+		$query_args['cat'] = $category_id;
+	}
+
+	// allows users to filter the post query per post.
+	$query_args = apply_filters( 'memberlite_recents_posts_query', $query_args, $post );	
+
+	// Run the post query.
+	query_posts( $query_args );
 	
 	if(!empty($title))
 		$r .= '<h1>' . $title . '</h1>';
@@ -76,7 +123,7 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 			}
 			else
 			{
-				$author_id = get_the_author_meta('ID');
+				$author_id = get_the_author_meta('id');
 				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_avatar( $author_id, 80 ) . '</a>';
 			}
 		}
