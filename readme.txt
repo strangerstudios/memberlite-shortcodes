@@ -3,23 +3,23 @@ Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
 Tested up to: 4.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A set of shortcodes designed enhance the appearance of your content with the Memberlite Theme.
 
 == Description ==
+= Shortcodes to enhance the appearance of your membership site content =
+For sites running the [Memberlite WordPress Membership Theme](http://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
 
-For sites running the [Memberlite Theme](http://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
-
-[Memberlite](http://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
+[Memberlite](http://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [WordPress Membership Plugin Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
 
 = [memberlite_banner] Shortcode =
 Create fluid-width banners to divide and highlight sections of content. You can define the background as an included theme color (primary, secondary, action, or body) or any hex color. [more info](http://memberlitetheme.com/memberlite-shortcodes/banners/)
 
 = [memberlite_btn] Shortcode =
-Add formatted buttons with the link URL, target, color, size, and optional icon. [more info](http://memberlitetheme.com/memberlite-shortcodes/buttons/)
+Add formatted buttons with the link URL, text, style, class, target, size, and optional icon. [more info](http://memberlitetheme.com/memberlite-shortcodes/buttons/)
 
 = [row] and [col] Shortcodes =
 Format your content in responsive columns based on a 12 column grid. You can nest columns by using the [row_row] and [col_col] shortcodes. [more info](http://memberlitetheme.com/memberlite-shortcodes/column-shortcodes/)
@@ -76,12 +76,15 @@ Visit http://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
-= 1.0.2 =
+= 1.0.2 - 2017-11-24 =
+* ENHANCEMENT: More attributes for recent posts to display posts by author or select post type (CPT).
+* ENHANCEMENT: Added a 'class' attribute to the memberlite_btn shortcode.
+* ENHANCEMENT: Now only loading CSS/JS resources when needed.
 * BUG: Now checking that PMPro is active before requiring memberlite_signup shortcode.
 
-= 1.0.1 =
-* BUG: Removed empty <h2></h2> when no title defined for banner shortcode.
+= 1.0.1 - 2016-08-15 =
+* BUG: Removed empty 'h2' when no title defined for banner shortcode.
 * BUG: Now using plugins_url to avoid http/https issues.
 
-= 1.0 =
+= 1.0 - 2016-07-05 =
 Initial Release
