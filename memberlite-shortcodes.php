@@ -16,12 +16,26 @@ define('MEMBERLITESC_VERSION', '1.0.1');
 	Enqueue Stylesheets and Javascript
 */
 function memberlitesc_init_styles() {
-	//need jquery
-	wp_enqueue_script('jquery');
+	global $post, $page;
+	$shortcodes = array(
+		'memberlite_banner', 'memberlite_btn', 'row', 'row_row', 'row_row_row', 
+		'row_row_row_your_boat', 'fa', 'memberlite_msg', 'memberlite_recent_posts', 
+		'memberlite_signup', 'memberlite_subpagelist', 'memberlite_tab'
+	);
 	
-	wp_enqueue_style('memberlite_fontawesome', MEMBERLITESC_URL . "/font-awesome/css/font-awesome.min.css", array(), "4.6.1");
-	wp_enqueue_script('memberlitesc_js', MEMBERLITESC_URL . "/js/memberlite-shortcodes.js", array( "jquery" ), MEMBERLITESC_VERSION, true);
-	wp_enqueue_style("memberlitesc_frontend", MEMBERLITESC_URL . "/css/memberlite-shortcodes.css", array(), MEMBERLITESC_VERSION);	
+	$should_exit = true;
+
+	foreach( $shortcodes as $sc ) {
+        	if ( ( isset($post->post_content) && has_shortcode( $post->post_content, $sc ) ) || ( isset( $page->post_content ) && has_shortcode( $page->post_content, $sc ) ) ) {
+            		$should_exit = false;
+        	}
+    	}
+	// Only load / enqueue resources if a shortcode is present on the post/page.
+	if ( false === $should_exit ) {
+		wp_enqueue_style('memberlite_fontawesome', MEMBERLITESC_URL . "/font-awesome/css/font-awesome.min.css", array(), "4.6.1");
+		wp_enqueue_script('memberlitesc_js', MEMBERLITESC_URL . "/js/memberlite-shortcodes.js", array( "jquery" ), MEMBERLITESC_VERSION, true);
+		wp_enqueue_style("memberlitesc_frontend", MEMBERLITESC_URL . "/css/memberlite-shortcodes.css", array(), MEMBERLITESC_VERSION);
+	}
 }
 add_action("wp_enqueue_scripts", "memberlitesc_init_styles");	
 
