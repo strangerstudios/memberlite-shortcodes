@@ -3,7 +3,7 @@
 Plugin Name: Memberlite Shortcodes
 Plugin URI: http://www.memberlitetheme.com/plugins/memberlite-shortcodes/
 Description: Shortcodes designed to work with the Memberlite Theme and Memberlite Child Themes.
-Version: 1.0.1
+Version: 1.0.2
 Author: kimannwall, strangerstudios
 Author URI: http://www.memberlitetheme.com
 */
