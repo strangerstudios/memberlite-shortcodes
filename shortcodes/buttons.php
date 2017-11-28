@@ -8,6 +8,7 @@ function memberlitesc_btn_shortcode($atts, $content = null) {
 		'class' => '',
 		'href' => '#',
 		'icon' => '',
+		'icon_position' => '',
 		'target' => 'self',
 		'text' => 'Go to Link'
     ), $atts));
@@ -28,10 +29,13 @@ function memberlitesc_btn_shortcode($atts, $content = null) {
 
 	$r = '<a class="' . $class . '" href="' . $href . '" target="_' . $target . '">';
 
-	if(!empty($icon)) {
+	if( !empty( $icon ) && ( empty($icon_position) || ($icon_position == 'before') ) ) {
 		$r .= '<i class="fa fa-' . $icon . '"></i>';	
 	}
     $r .= $text;
+	if( !empty( $icon ) && ( $icon_position == 'after' ) ) {
+		$r .= '<i class="fa fa-' . $icon . '"></i>';	
+	}
     $r .= '</a>';
     return $r;
 }

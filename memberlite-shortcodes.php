@@ -1,16 +1,16 @@
 <?php
 /*
 Plugin Name: Memberlite Shortcodes
-Plugin URI: http://www.memberlitetheme.com/plugins/memberlite-shortcodes/
+Plugin URI: https://memberlitetheme.com/plugins/memberlite-shortcodes/
 Description: Shortcodes designed to work with the Memberlite Theme and Memberlite Child Themes.
-Version: 1.0.2
+Version: 1.1
 Author: kimannwall, strangerstudios
-Author URI: http://www.memberlitetheme.com
+Author URI: https://memberlitetheme.com
 */
 
 define('MEMBERLITESC_DIR', dirname(__FILE__) );
 define('MEMBERLITESC_URL', plugins_url('', __FILE__));
-define('MEMBERLITESC_VERSION', '1.0.1');
+define('MEMBERLITESC_VERSION', '1.1');
 
 /*
 	Enqueue Stylesheets and Javascript
