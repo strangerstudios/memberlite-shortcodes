@@ -76,8 +76,10 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
-= 1.1 - 2017-11-24 =
+= 1.1 - 2017-11-28 =
+* BUG: Fixed warning and deprecated function for get_the_author_meta().
 * ENHANCEMENT: More attributes for recent posts to display posts by author or select post type (CPT).
+* ENHANCEMENT: Added a 'icon_position' attribute to the memberlite_btn shortcode.
 * ENHANCEMENT: Added a 'class' attribute to the memberlite_btn shortcode.
 * ENHANCEMENT: Now only loading CSS/JS resources when needed.
 * BUG: Now checking that PMPro is active before requiring memberlite_signup shortcode.
