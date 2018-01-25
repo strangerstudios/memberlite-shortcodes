@@ -15,20 +15,14 @@ For sites running the [Memberlite WordPress Membership Theme](https://memberlite
 
 [Memberlite](https://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [WordPress Membership Plugin Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
 
+= [memberlite_accordion] Shortcode =
+Add an accordion block with collapsible sections using this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/accordion/)
+
 = [memberlite_banner] Shortcode =
 Create fluid-width banners to divide and highlight sections of content. You can define the background as an included theme color (primary, secondary, action, or body) or any hex color. [more info](https://memberlitetheme.com/memberlite-shortcodes/banners/)
 
 = [memberlite_btn] Shortcode =
 Add formatted buttons with the link URL, text, style, class, target, size, and optional icon. [more info](https://memberlitetheme.com/memberlite-shortcodes/buttons/)
-
-= [row] and [col] Shortcodes =
-Format your content in responsive columns based on a 12 column grid. You can nest columns by using the [row_row] and [col_col] shortcodes. [more info](https://memberlitetheme.com/memberlite-shortcodes/column-shortcodes/)
-
-= [fa] Shortcode =
-Easily add any Font Awesome icon using this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/font-awesome-icons/)
-
-= [memberlite_signup] Shortcode =
-If you're using [Paid Memberships Pro](https://www.paidmembershipspro.com), this shortcode will display a block with signup fields for a specific membership level. [more info](https://memberlitetheme.com/memberlite-shortcodes/membership-signup-block/)
 
 = [memberlite_msg] Shortcode =
 Insert a stylized contextual message block with styling for default, info, alert, error, or a success message. [more info](https://memberlitetheme.com/memberlite-shortcodes/contextual-messages/)
@@ -36,11 +30,20 @@ Insert a stylized contextual message block with styling for default, info, alert
 = [memberlite_recent_posts] Shortcode =
 Designed to be used on the homepage, this shortcode displays the newest posts or a defined category of posts accoriding to your shortcode settings. [more info](https://memberlitetheme.com/memberlite-shortcodes/recent-posts/)
 
+= [memberlite_signup] Shortcode =
+If you're using [Paid Memberships Pro](https://www.paidmembershipspro.com), this shortcode will display a block with signup fields for a specific membership level. [more info](https://memberlitetheme.com/memberlite-shortcodes/membership-signup-block/)
+
 = [memberlite_subpagelist] Shortcode =
 Easily create a digest view of a given pages' subpages, with an excerpt or the full page content, in the order you define. [more info](https://memberlitetheme.com/memberlite-shortcodes/subpagelist/)
 
 = [memberlite_tabs] and [memberlite_tab] Shortcode =
 Add a tabbed content block with this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/tabs/)
+
+= [row] and [col] Shortcodes =
+Format your content in responsive columns based on a 12 column grid. You can nest columns by using the [row_row] and [col_col] shortcodes. [more info](https://memberlitetheme.com/memberlite-shortcodes/column-shortcodes/)
+
+= [fa] Shortcode =
+Easily add any Font Awesome icon using this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/font-awesome-icons/)
 
 Full documentation on all included shortcodes can be found at [the Memberlite Theme homepage](https://memberlitetheme.com/memberlite-shortcodes/)
 
