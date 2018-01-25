@@ -76,6 +76,9 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
+= 1.2 - 2017-XX-XX =
+* ENHANCEMENT: Now using version 4.7 of Font Awesome.
+
 = 1.1 - 2017-11-28 =
 * BUG: Fixed warning and deprecated function for get_the_author_meta().
 * ENHANCEMENT: More attributes for recent posts to display posts by author or select post type (CPT).

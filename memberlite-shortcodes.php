@@ -18,7 +18,7 @@ define('MEMBERLITESC_VERSION', '1.1');
 function memberlitesc_init_styles() {
 	global $post, $page;
 	$shortcodes = array(
-		'memberlite_banner', 'memberlite_btn', 'row', 'row_row', 'row_row_row', 
+		'memberlite_accordion', 'memberlite_banner', 'memberlite_btn', 'row', 'row_row', 'row_row_row', 
 		'row_row_row_your_boat', 'fa', 'memberlite_msg', 'memberlite_recent_posts', 
 		'memberlite_signup', 'memberlite_subpagelist', 'memberlite_tab'
 	);
@@ -32,7 +32,7 @@ function memberlitesc_init_styles() {
     	}
 	// Only load / enqueue resources if a shortcode is present on the post/page.
 	if ( false === $should_exit ) {
-		wp_enqueue_style('memberlite_fontawesome', MEMBERLITESC_URL . "/font-awesome/css/font-awesome.min.css", array(), "4.6.1");
+		wp_enqueue_style('font-awesome', MEMBERLITESC_URL . "/font-awesome/css/font-awesome.min.css", array(), "4.7");
 		wp_enqueue_script('memberlitesc_js', MEMBERLITESC_URL . "/js/memberlite-shortcodes.js", array( "jquery" ), MEMBERLITESC_VERSION, true);
 		wp_enqueue_style("memberlitesc_frontend", MEMBERLITESC_URL . "/css/memberlite-shortcodes.css", array(), MEMBERLITESC_VERSION);
 	}
@@ -45,6 +45,7 @@ add_action("wp_enqueue_scripts", "memberlitesc_init_styles");
 	Note we load on init with priority 20 here so we load after shortcodes that might still be around from Memberlite 2.0 and prior.
 */
 function memberlitesc_init_shortcodes() {
+	require_once(MEMBERLITESC_DIR . "/shortcodes/accordion.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/banners.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/buttons.php");
 	require_once(MEMBERLITESC_DIR . "/shortcodes/columns.php");

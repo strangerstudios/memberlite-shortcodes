@@ -109,6 +109,28 @@
 input.pmpro_error {background-image: none;}
 select.pmpro_error {background-image: none;}
 
+/* [memberlite_accordion] Shortcode */
+.memberlite_accordion {}
+.memberlite_accordion h3, .entry-content .memberlite_accordion h3 {
+	border-top: 1px solid #CCC;
+	cursor: pointer;
+	margin: 0;
+	padding: 1rem;
+}
+.memberlite_accordion h3:before {
+	content: "\f078";
+	float: right;
+	font-family: 'FontAwesome';
+	margin: 0 16px;
+	margin: 0 1rem
+}
+.memberlite_accordion .memberlite_accordion-item-content {
+	display: none;
+	margin: 0;
+	padding: 1rem;
+}
+
+
 /* [memberlite_recent_posts] Shortcode */
 .memberlite_recent_posts { }
 .memberlite_recent_posts h1 {margin-bottom: .5em; }
@@ -150,7 +172,19 @@ select.pmpro_error {background-image: none;}
 }
 
 /* [memberlite_signup] Shortcode */
-form.memberlite_signup label, form.pmpro_signup_form label {float: none; margin: 0; width: auto; display: block; text-align: left; }
+form.memberlite_signup div {
+	margin: .5em 0;
+}
+form.memberlite_signup label, 
+form.pmpro_signup_form label {
+/*
+	float: none; 
+	margin: 0; 
+	width: auto; 
+	display: block; 
+	text-align: left; 
+*/
+}
 form.memberlite_signup input[type=text], form.memberlite_signup input[type=email], form.memberlite_signup input[type=password], form.pmpro_signup_form input[type=text], form.pmpro_signup_form input[type=email], form.pmpro_signup_form input[type=password]
  {max-width: 100%; width: 100%; }
 form.memberlite_signup .pmpro_btn, form.pmpro_signup_form .pmpro_btn {display: block; width: 100%; }
@@ -163,45 +197,5 @@ form.memberlite_signup .pmpro_btn, form.pmpro_signup_form .pmpro_btn {display: b
 	padding-bottom: 3rem;
 }
 
-/* [memberlite_tabs] and [memberlite_tab] Shortcode */
-.memberlite_tabbable ul.memberlite_tabs {margin: 0; }
-.memberlite_tabbable ul.memberlite_tabs li {
-	float: left;
-	list-style: none;
-	margin: 0 .5rem 0 0;
-}
-.memberlite_tabbable ul.memberlite_tabs li > a {
-	background: none;
-	border: 1px solid #CCC;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-	border-bottom: none;
-	color: #777777;
-	display: inline-block;
-	float: none;
-	padding: 1.5rem 2rem;
-	text-decoration: none;
-}
-.memberlite_tabbable ul.memberlite_tabs li > a:hover {
-	background: #EFEFEF;
-}
-.memberlite_tabbable ul.memberlite_tabs li.memberlite_active a {
-	background-color: #BBB;
-	border-color: #BBB;
-	font-weight: bold;
-}
-.memberlite_tabbable .memberlite_tab_content {
-	border-top: .5rem solid #BBB;
-	clear: both; 
-	padding-top: 4rem;
-}
-.memberlite_tabbable .memberlite_tab_pane {
-	display: none;
-}
-.memberlite_tabbable .memberlite_tab_pane.memberlite_active {
-	display: block;
-}
+/* [memberlite_tabs] and [memberlite_tab] Shortcode in Memberlite Theme. */
 
-#comments .memberlite_tabbable .memberlite_tab_content {
-	padding-top: 0; 
-}
