@@ -124,10 +124,16 @@ select.pmpro_error {background-image: none;}
 	margin: 0 16px;
 	margin: 0 1rem
 }
+.memberlite_accordion-item.memberlite_accordion-active h3:before {
+	content: "\f077";
+}
 .memberlite_accordion .memberlite_accordion-item-content {
 	display: none;
 	margin: 0;
 	padding: 1rem;
+}
+.memberlite_accordion-item:first-child .memberlite_accordion-item-content {
+	display: block;
 }
 
 
