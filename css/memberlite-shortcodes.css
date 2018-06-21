@@ -196,11 +196,8 @@ form.memberlite_signup input[type=text], form.memberlite_signup input[type=email
 form.memberlite_signup .pmpro_btn, form.pmpro_signup_form .pmpro_btn {display: block; width: 100%; }
 
 /* [memberlite_subpagelist] Shortcode */
-.memberlite_subpagelist_item {
-	padding-top: 3rem;
-}
-.memberlite_subpagelist_item .entry-content {
-	padding-bottom: 3rem;
+.page .entry-content .memberlite_subpagelist_item .entry-content {
+	border-bottom: none;
 }
 
 /* [memberlite_tabs] and [memberlite_tab] Shortcode in Memberlite Theme. */

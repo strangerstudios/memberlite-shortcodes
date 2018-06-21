@@ -155,7 +155,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 			}
 
 			$r .= '<header class="entry-header">';
-			$r .= '<h1 class="entry-title">';
+			$r .= '<h2 class="entry-title">';
 
 			if( $link ) {
 				$r .= '<a href="' . get_permalink() . '" rel="bookmark">';
@@ -165,7 +165,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 				$r .= the_title( '', '', false );
 			}
 
-			$r .= '</h1>';
+			$r .= '</h2>';
 			$r .= '</header>';
 			$r .= '<div class="entry-content">';
 
