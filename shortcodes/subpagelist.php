@@ -134,6 +134,15 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 
 			if ( $thumbnail == 'icon' ) {
 				$memberlite_page_icon = get_post_meta( $post->ID, '_memberlite_page_icon', true );
+				$font_awesome_icons_brands = memberlite_shortcodes_get_font_awesome_icons( 'brand' );
+
+				// Check if the icon is a "brand" icon and set the appropriate icon class.
+			    if ( in_array( $memberlite_page_icon, $font_awesome_icons_brands ) ) {
+			        $memberlite_page_icon_class = 'fab';
+			    } else {
+					$memberlite_page_icon_class = 'fa';
+				}
+
 				if ( ! empty( $memberlite_page_icon ) ) {
 					$r .= '<div class="row">';
 					if ( $layout == '3col' || $layout == '4col' ) {
@@ -142,9 +151,9 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 						$r .= '<div class="large-2 text-center columns">';
 					}
 					if ( $link ) {
-						$r .= '<a href="' . get_permalink() . '"><i class="fa fa-5x fa-' . $memberlite_page_icon . '"></i></a>';
+						$r .= '<a href="' . get_permalink() . '"><i class="' . $memberlite_page_icon_class . ' fa-5x fa-' . $memberlite_page_icon . '"></i></a>';
 					} else {
-						$r .= '<i class="fa fa-5x fa-' . $memberlite_page_icon . '"></i>';
+						$r .= '<i class="' . $memberlite_page_icon_class . ' fa-5x fa-' . $memberlite_page_icon . '"></i>';
 					}
 					if ( $layout == '3col' || $layout == '4col' ) {
 						$r .= '</div><div class="row"><div class="large-12 columns">';

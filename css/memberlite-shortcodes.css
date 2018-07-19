@@ -29,7 +29,7 @@
 	/* -webkit-appearance: button; Corrects inability to style clickable 'input' types in iOS */
 	font-family: 'Lato', sans-serif;
 	font-size: 16px;
-	font-size: 1.6rem;	
+	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 400;
 	display: inline-block;
@@ -82,18 +82,18 @@
 
 /* [memberlite_msg] Shortcode */
 .pmpro_message, .pmpro_content_message, #pmpro_account_loggedin {
-	background-color: #d9edf7; 
-	-webkit-border-radius: 5px; 
-	-moz-border-radius: 5px; 
-	border-radius: 5px; 
-	border: 1px solid #bce8f1; 
-	color: #31708f; 
-	font-size: 16px; 
-	font-size: 1.6rem; 
-	font-weight: 400; 
+	background-color: #d9edf7;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #bce8f1;
+	color: #31708f;
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: 400;
 	line-height: 2.6rem;
-	margin: .5em 0; 
-	padding: 10px 15px; 
+	margin: .5em 0;
+	padding: 10px 15px;
 }
 .pmpro_message.pmpro_default {background-color: #FAFAFA; color: #777; border-color: #DADADA; }
 .pmpro_success {background-color: #dff0d8; color: #3c763d; border-color: #d6e9c6; }
@@ -120,7 +120,7 @@ select.pmpro_error {background-image: none;}
 .memberlite_accordion h3:before {
 	content: "\f078";
 	float: right;
-	font-family: 'FontAwesome';
+	font-family: 'Font Awesome 5 Free';
 	margin: 0 16px;
 	margin: 0 1rem
 }
@@ -149,7 +149,7 @@ select.pmpro_error {background-image: none;}
 .memberlite_recent_posts .widget_post_thumbnail {
 	display: block;
 	float: left;
-	width: 80px; 
+	width: 80px;
 	height: 80px;
 	border-radius: 50%;
 	margin: 0 .5em 0em -.5em;
@@ -181,14 +181,14 @@ select.pmpro_error {background-image: none;}
 form.memberlite_signup div {
 	margin: .5em 0;
 }
-form.memberlite_signup label, 
+form.memberlite_signup label,
 form.pmpro_signup_form label {
 /*
-	float: none; 
-	margin: 0; 
-	width: auto; 
-	display: block; 
-	text-align: left; 
+	float: none;
+	margin: 0;
+	width: auto;
+	display: block;
+	text-align: left;
 */
 }
 form.memberlite_signup input[type=text], form.memberlite_signup input[type=email], form.memberlite_signup input[type=password], form.pmpro_signup_form input[type=text], form.pmpro_signup_form input[type=email], form.pmpro_signup_form input[type=password]
@@ -201,4 +201,3 @@ form.memberlite_signup .pmpro_btn, form.pmpro_signup_form .pmpro_btn {display: b
 }
 
 /* [memberlite_tabs] and [memberlite_tab] Shortcode in Memberlite Theme. */
-
