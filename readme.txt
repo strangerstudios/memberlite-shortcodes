@@ -2,7 +2,7 @@
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
-Tested up to: 4.9.4
+Tested up to: 4.9.7
 Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -66,7 +66,7 @@ Browse the Memberlite Shortcodes documentation to see all shortcodes, their attr
 1. Demo of the Recent Posts shortcode [memberlite_recent_posts] with featured images, excerpts, and a three-column layout.
 2. Demo of the [memberlite_subpagelist] shortcode in a column layout and demo of the [fa] icons.
 3. Demo of the [memberlite_signup] shortcode for a Paid Memberships Pro membership level in a two-column layout using the [memberlite_banner] with the "body" background.
- 
+
 == Frequently Asked Questions ==
 
 = Where can I find Memberlite Shortcodes documentation and user guides? =
