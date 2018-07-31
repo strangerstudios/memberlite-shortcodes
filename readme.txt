@@ -11,9 +11,9 @@ A set of shortcodes designed enhance the appearance of your content with the Mem
 
 == Description ==
 = Shortcodes to enhance the appearance of your membership site content =
-For sites running the [Memberlite WordPress Membership Theme](https://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
+For sites running the [Memberlite Theme](https://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
 
-[Memberlite](https://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [WordPress Membership Plugin Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
+[Memberlite](https://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
 
 = [memberlite_accordion] Shortcode =
 Add an accordion block with collapsible sections using this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/accordion/)
