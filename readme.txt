@@ -3,7 +3,7 @@ Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
 Tested up to: 4.9.7
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,7 +79,11 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
-= 1.2 - 2017-02-21 =
+= 1.3 - 2018-07-30 =
+* ENHANCEMENT: Updated to use Font Awesome version 5.2.
+* ENHANCEMENT: Adjusted styles and memberlite_subpagelist shortcode to match Memberlite Theme version 4.0 styling.
+
+= 1.2 - 2018-02-21 =
 * ENHANCEMENT: Added additional attributes to the memberlite_subpagelist shortcode (include, post_type, meta_key).
 * ENHANCEMENT: Added Accordion shortcode.
 * ENHANCEMENT: Now using version 4.7 of Font Awesome.
