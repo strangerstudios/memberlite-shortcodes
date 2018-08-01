@@ -146,17 +146,19 @@ select.pmpro_error {background-image: none;}
 }
 #widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header {
 	display: grid;
-	grid-template-columns: 1fr .1fr 4fr;
+	grid-template-columns: 80px auto;
 	grid-template-areas:
-    "thumbnail . title"
-    "thumbnail . date";
+    "thumbnail title"
+    "thumbnail date";
 	margin-bottom: 1.45rem;
 }
 #widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .entry-title {
-	margin: 0;
+	align-self: end;
 	grid-area: title;
+	margin: 0;
 }
 #widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .post-date {
+	align-self: start;
 	color: #AAA;
 	grid-area: date;
 }
