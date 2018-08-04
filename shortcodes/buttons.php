@@ -12,13 +12,22 @@ function memberlitesc_btn_shortcode($atts, $content = null) {
 		'target' => 'self',
 		'text' => 'Go to Link'
     ), $atts));
-	
+
     //css classes based on styles
     $styles = explode(",", $style);
 	$style_classes = array();
 	foreach($styles as $onestyle) {
 		$style_classes[] = 'btn_'.trim($onestyle);
 	}
+
+    $font_awesome_icons_brands = memberlite_shortcodes_get_font_awesome_icons( 'brand' );
+
+    // Check if the icon is a "brand" icon and set the type attribute.
+    if ( in_array( $icon, $font_awesome_icons_brands ) ) {
+        $icon_class = 'fab';
+    } else {
+        $icon_class = 'fa';
+    }
 
 	//combine with classes passed in as an attribute
 	if( $style === 'link' ) {
@@ -30,11 +39,11 @@ function memberlitesc_btn_shortcode($atts, $content = null) {
 	$r = '<a class="' . $class . '" href="' . $href . '" target="_' . $target . '">';
 
 	if( !empty( $icon ) && ( empty($icon_position) || ($icon_position == 'before') ) ) {
-		$r .= '<i class="fa fa-' . $icon . '"></i>';	
+        $r .= '<i class="' . $icon_class . ' fa-' . $icon . '"></i>';
 	}
     $r .= $text;
 	if( !empty( $icon ) && ( $icon_position == 'after' ) ) {
-		$r .= '<i class="fa fa-' . $icon . '"></i>';	
+		$r .= '<i class="' . $icon_class . ' fa-' . $icon . '"></i>';
 	}
     $r .= '</a>';
     return $r;

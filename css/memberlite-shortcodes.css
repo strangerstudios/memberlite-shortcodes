@@ -76,9 +76,23 @@
 	text-decoration: none;
 	text-shadow: none;
 }
-.btn_link:hover {text-decoration: underline; }
-.btn_block, .btn_block:link {display: block; }
-.btn .fa, .btn_link .fa  {padding: 0 .5rem; }
+.btn_link:hover {
+	text-decoration: underline;
+}
+.btn_block,
+.btn_block:link {
+	display: block;
+}
+.btn .fa,
+.btn .fab,
+.btn .far,
+.btn .fas,
+.btn_link .fa,
+.btn_link .fab,
+.btn_link.far,
+.btn_link .fas {
+	padding: 0 .5rem;
+}
 
 /* [memberlite_msg] Shortcode */
 .pmpro_message, .pmpro_content_message, #pmpro_account_loggedin {
