@@ -20,21 +20,17 @@
 .btn:link {
 	background: #95a5a6;
 	border: none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
-	box-shadow: none;
-	color: #FFF !important;
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+	color: #FFF;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	/* -webkit-appearance: button; Corrects inability to style clickable 'input' types in iOS */
+	-webkit-appearance: none;
 	font-family: 'Lato', sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	font-style: normal;
-	font-weight: 400;
+	font-weight: normal;
 	display: inline-block;
-	line-height: 2.6rem;
-	padding: 1rem 1.5rem;
+	padding: 1.45rem 2.9rem;
 	text-align: center;
 	text-decoration: none;
 	text-shadow: none;
@@ -65,15 +61,18 @@
 .btn_alert:hover {background-color: #ec971f; }
 
 .btn_link {
+	background: none;
+    border: none;
+    box-shadow: none;
+	color: #2C3E50;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	display: inline-block;
-	/* -webkit-appearance: button; Corrects inability to style clickable 'input' types in iOS */
 	font-family: 'Lato', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	overflow: hidden;
-	padding: 1rem 1.5rem;
-	text-decoration: none;
+	padding: 1.45rem 2.9rem;
+	text-decoration: underline;
 	text-shadow: none;
 }
 .btn_link:hover {
@@ -135,6 +134,7 @@ select.pmpro_error {background-image: none;}
 	content: "\f078";
 	float: right;
 	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
 	margin: 0 16px;
 	margin: 0 1rem
 }
