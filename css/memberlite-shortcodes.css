@@ -3,7 +3,7 @@
 
 /* [memberlite_banner] Shortcode */
 .banner {
-	padding: 4rem 0;
+	padding: 5.8rem 0;
 }
 .banner .text-center {
 	text-align: center;
@@ -101,12 +101,8 @@
 	border-radius: 5px;
 	border: 1px solid #bce8f1;
 	color: #31708f;
-	font-size: 16px;
-	font-size: 1.6rem;
-	font-weight: 400;
-	line-height: 2.6rem;
-	margin: .5em 0;
-	padding: 10px 15px;
+	margin: 2.9rem 0;
+	padding: 1.45rem;
 }
 .pmpro_message.pmpro_default {background-color: #FAFAFA; color: #777; border-color: #DADADA; }
 .pmpro_success {background-color: #dff0d8; color: #3c763d; border-color: #d6e9c6; }
@@ -124,19 +120,19 @@ select.pmpro_error {background-image: none;}
 
 /* [memberlite_accordion] Shortcode */
 .memberlite_accordion {}
-.memberlite_accordion h3, .entry-content .memberlite_accordion h3 {
+.memberlite_accordion h3,
+.entry-content .memberlite_accordion h3 {
 	border-top: 1px solid #CCC;
 	cursor: pointer;
 	margin: 0;
-	padding: 1rem;
+	padding: 1.45rem;
 }
 .memberlite_accordion h3:before {
 	content: "\f078";
 	float: right;
 	font-family: 'Font Awesome 5 Free';
 	font-weight: 700;
-	margin: 0 16px;
-	margin: 0 1rem
+	margin: 0 1.45rem;
 }
 .memberlite_accordion-item.memberlite_accordion-active h3:before {
 	content: "\f077";
@@ -144,12 +140,11 @@ select.pmpro_error {background-image: none;}
 .memberlite_accordion .memberlite_accordion-item-content {
 	display: none;
 	margin: 0;
-	padding: 1rem;
+	padding: 0 1.45rem 1.45rem 1.45rem;
 }
 .memberlite_accordion-item:first-child .memberlite_accordion-item-content {
 	display: block;
 }
-
 
 /* [memberlite_recent_posts] Shortcode */
 #widget_memberlite_recent_posts .post.hentry {
