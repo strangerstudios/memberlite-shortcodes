@@ -9,12 +9,20 @@ function memberlitesc_banner_shortcode($atts, $content = null) {
 		'color' => '',
 		'title' => '',
     ), $atts));
-	if(preg_match('/^#[a-f0-9]{6}$/i', $background)) 
-		$r = '<div class="banner" style="background-color: ' . $background . '">';
-	elseif(preg_match('/^[a-f0-9]{6}$/i', $background))
-		$r = '<div class="banner" style="background-color: #' . $background . '">';
-	else
-		$r = '<div class="banner banner_' . $background . '">';
+    
+	if ( preg_match( '/^#[a-f0-9]{6}$/i', $background ) ) {
+        // The background color was specified as a HEX value with the # symbol.
+		$r = '<div class="banner banner_custom-color" style="background-color: ' . $background . ';">';
+    } elseif ( preg_match( '/^[a-f0-9]{6}$/i', $background ) ) {
+        // The background color was specified as a HEX value without the # symbol.
+		$r = '<div class="banner banner_custom-color" style="background-color: #' . $background . ';">';
+    } elseif( preg_match('/\.(gif|jpg|png|svg|jpeg)$/', $background ) ) {
+        // A background image url was specified.
+    	$r = '<div class="banner banner_background-image" style="background-image: url(' . esc_url( $background ) . ');">';
+	} else {
+        // A background color value of primary, secondary, action, or body was specified.
+		$r = '<div class="banner banner_' . esc_attr( $background ) . '">';
+    }
 	$r .= '<div class="row"><div class="medium-12 columns';
 	if($align)
 		$r .= ' text-' . $align;
