@@ -2,8 +2,8 @@
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
-Tested up to: 4.9.8
-Stable tag: 1.3.1
+Tested up to: 5.2
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,10 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
+
+= 1.3.2 - 2019-05-09 =
+* ENHANCEMENT: Updating to Font Awesome version 5.8.2.
+
 = 1.3.1 - 2018-08-01 =
 * BUG FIX: Improved broken layout of Recent Posts shortcode to use grid layout properly.
 
