@@ -12,6 +12,12 @@ define( 'MEMBERLITESC_DIR', dirname( __FILE__ ) );
 define( 'MEMBERLITESC_URL', plugins_url( '', __FILE__ ) );
 define( 'MEMBERLITESC_VERSION', '1.3.2' );
 
+// First check if Memberlite theme or child theme is active.
+if ( 'memberlite' !== wp_get_theme()->template )
+{
+	return;
+}
+
 /**
  * Enqueue Stylesheets and Javascript
  */
