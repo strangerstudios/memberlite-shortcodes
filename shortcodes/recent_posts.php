@@ -109,6 +109,8 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 		$r .= '<div class="' . $colclass . ' columns ';
 		if ( has_post_thumbnail() || ! empty( $show_avatar ) ) {
 			$r .= ' widget_has_thumbnail';
+		} else {
+			$r .= ' widget_no_thumbnail';
 		}
 		$r .= '">';
 
@@ -118,10 +120,10 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 
 		if ( has_post_thumbnail() || ! empty( $show_avatar ) ) {
 			if ( has_post_thumbnail() ) {
-				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_the_post_thumbnail($post->ID, 'thumbnail') . '</a>';
+				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . wp_get_attachment_image( get_post_thumbnail_id( ) ) . '</a>';
 			} else {
 				$author_id = get_the_author_meta( 'ID' );
-				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_avatar( $author_id, 80 ) . '</a>';
+				$r .= '<a class="widget_post_thumbnail" href="' . get_permalink() . '">' . get_avatar( $author_id, 80, '', get_the_author_meta( 'display_name' ) ) . '</a>';
 			}
 		}
 

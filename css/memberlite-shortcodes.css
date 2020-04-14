@@ -163,18 +163,26 @@ select.pmpro_error {background-image: none;}
 	"thumbnail . date";
 	margin-bottom: 1.45rem;
 }
+#widget_memberlite_recent_posts .widget_no_thumbnail .post.hentry .entry-header {
+	display: block;
+	margin-bottom: 1.45rem;
+}
+#widget_memberlite_recent_posts .post.hentry .entry-header .entry-title {
+	margin: 0;
+}
 #widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .entry-title {
 	align-self: end;
 	grid-area: title;
-	margin: 0;
 }
-#widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .post-date {
-	align-self: start;
+#widget_memberlite_recent_posts .post.hentry .entry-header .post-date {
 	color: #AAA;
-	grid-area: date;
 }
 .banner #widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .post-date {
 	color: #EEE;
+}
+#widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .post-date {
+	align-self: start;
+	grid-area: date;
 }
 #widget_memberlite_recent_posts .widget_has_thumbnail .post.hentry .entry-header .widget_post_thumbnail {
 	border-radius: 50%;
