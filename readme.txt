@@ -2,8 +2,8 @@
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
-Tested up to: 5.2.2
-Stable tag: 1.3.2
+Tested up to: 5.4
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,8 +80,16 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
+= 1.3.3 - 2020-04-14 =
+* BUG FIX: Fixed display bug for a recent post in shortcode output with no avatar or featured image.
+* BUG FIX/ENHANCEMENT: Added alt tag to recent posts shortcode output for featured image or avatar.
+* BUG FIX/ENHANCEMENT: Adjusted button font-family to inherity from body rather than set explicitly.
+* ENHANCEMENT: Added support for `cat` or `tag_id` as attributes of the `memberlite_subpagelist` shortcode.
+* ENHANCEMENT: Now using version 5.13.0 of Font Awesome.
+* ENHANCEMENT: Now tested up to WordPress 5.4.
+
 = 1.3.2 - 2019-05-09 =
-* ENHANCEMENT: Updating to Font Awesome version 5.8.2.
+* ENHANCEMENT: Now using version 5.8.2 of Font Awesome.
 
 = 1.3.1 - 2018-08-01 =
 * BUG FIX: Improved broken layout of Recent Posts shortcode to use grid layout properly.

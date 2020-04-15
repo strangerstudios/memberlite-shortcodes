@@ -11,6 +11,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 	// $code    ::= the shortcode found, when == callback name
 	// examples: [subpagelist exclude="1,2,3" show="excerpt" link="true" orderby="menu_order"]
 	extract( shortcode_atts( array(
+		'cat' => null,
 		'exclude' => null,
 		'include' => null,
 		'layout' => null,
@@ -23,6 +24,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 		'post_parent' => $post->ID,
 		'show' => 'excerpt',
 		'show_children' => false,
+		'tag_id' => null,
 		'thumbnail' => false,
 	), $atts) );
 
@@ -36,7 +38,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 		$show_children = false;
 	}
 
-	if( $thumbnail && strtolower( $thumbnail ) != 'false' ) {
+	if ( $thumbnail && strtolower( $thumbnail ) != 'false' ) {
 
 	} else {
 		$thumbnail = false;
@@ -73,6 +75,9 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 	}
 	$args['order'] = $order;
 	$args['orderby'] = $orderby;
+	if ( ! empty( $cat ) ) {
+		$args['cat'] = $cat;
+	}
 	if ( ! empty( $exclude_array ) ) {
 		$args['post__not_in'] = $exclude_array;
 	}
@@ -84,6 +89,9 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 	}
 	$args['post_type'] = $post_type_array;
 	$args['showposts'] = -1;
+	if ( ! empty( $tag_id ) ) {
+		$args['tag_id'] = $tag_id;
+	}
 
 	// Get posts.
 	$memberlite_subpageposts = get_posts( $args );
