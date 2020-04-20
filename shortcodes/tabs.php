@@ -12,8 +12,9 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 	
 	//figure out the active tab and store in a global
 	global $post, $memberlite_active_tabs;
-	if ( ! $memberlite_active_tabs ) 
+	if ( empty( $memberlite_active_tabs ) ) {
 		$memberlite_active_tabs = array();
+	}
 	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count($memberlite_active_tabs);
 	if(!empty($_COOKIE[$cookie_name]))
 		$cookie_value = $_COOKIE[$cookie_name];
