@@ -80,8 +80,11 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
-= 1.3.3 - 2020-04-14 =
+= 1.3.3 - 2020-04-20 =
 * BUG FIX: Fixed display bug for a recent post in shortcode output with no avatar or featured image.
+* BUG FIX: Fixed issue with $memberlite_active_tabs not countable.
+* BUG FIX: Now inheriting font-family for .btn, button, input[type=submit] from the body property.
+* BUG FIX/ENHANCEMENT: Adjusted `memberlite_subpagelist` shortcode logic to accept `post_parent="-1"` to allow a meta_key query across pages, regardless of the parent.
 * BUG FIX/ENHANCEMENT: Added alt tag to recent posts shortcode output for featured image or avatar.
 * BUG FIX/ENHANCEMENT: Adjusted button font-family to inherity from body rather than set explicitly.
 * ENHANCEMENT: Added support for `cat` or `tag_id` as attributes of the `memberlite_subpagelist` shortcode.

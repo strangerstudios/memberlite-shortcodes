@@ -38,6 +38,10 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 		$show_children = false;
 	}
 
+	if ( $post_parent == '-1' || $post_parent == 'any' || $post_parent == 'none' ) {
+		$post_parent = NULL;
+	}
+
 	if ( $thumbnail && strtolower( $thumbnail ) != 'false' ) {
 
 	} else {
@@ -84,7 +88,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 	if ( ! empty( $include_array ) ) {
 		$args['post__in'] = $include_array;
 	}
-	if ( empty( $include_array ) &&  $post_type_array === array( 'page' ) ) {
+	if ( empty( $include_array ) && $post_type_array === array( 'page' ) && ! empty( $post_parent ) ) {
 		$args['post_parent'] = $post_parent;
 	}
 	$args['post_type'] = $post_type_array;
