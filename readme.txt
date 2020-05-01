@@ -80,7 +80,7 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
-= 1.3.3 - 2020-04-20 =
+= 1.3.3 - 2020-04-30 =
 * BUG FIX: Fixed display bug for a recent post in shortcode output with no avatar or featured image.
 * BUG FIX: Fixed issue with $memberlite_active_tabs not countable.
 * BUG FIX: Now inheriting font-family for .btn, button, input[type=submit] from the body property.
