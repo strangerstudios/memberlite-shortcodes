@@ -42,4 +42,22 @@ jQuery( document ).ready( function() {
 		}
 	});	 
 
+	jQuery("body").on("click", ".memberlite_active a", function(){
+
+		if( typeof memberlite_postdata !== 'undefined' ){
+
+			if( memberlite_postdata.tabs_cookie !== false ){
+
+				var item_name = jQuery(this).html();
+				var post_id = memberlite_postdata.post_id;
+				var active_tabs = memberlite_postdata.active_tabs;
+
+			  	Cookies.set('memberlite_active_tabs_'+post_id+'_'+active_tabs, Array( item_name ), { expires: 1, path: '' } );
+
+		  	}
+
+		}
+
+	});
+
 });

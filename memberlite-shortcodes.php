@@ -44,8 +44,15 @@ function memberlitesc_init_styles() {
 	// Only load / enqueue resources if a shortcode is present on the post/page.
 	if ( false === $should_exit ) {
 		wp_enqueue_style( 'font-awesome', MEMBERLITESC_URL . '/font-awesome/css/all.min.css', array(), '5.13.0' );
+		wp_enqueue_script( 'js-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js', array(), MEMBERLITESC_VERSION, true );		
 		wp_enqueue_script( 'memberlitesc_js', MEMBERLITESC_URL . '/js/memberlite-shortcodes.js', array( 'jquery' ), MEMBERLITESC_VERSION, true );
-		wp_enqueue_style( 'memberlitesc_frontend', MEMBERLITESC_URL . '/css/memberlite-shortcodes.css', array(), MEMBERLITESC_VERSION );
+		global $memberlite_active_tabs;
+		wp_localize_script( 'memberlitesc_js', 'memberlite_postdata', array( 
+			'post_id' => $post->ID, 
+			'active_tabs' => count( $memberlite_active_tabs ), 
+			'tabs_cookie' => apply_filters( 'memberlite_shortcodes_tab_cookie', true ) 
+		) );
+		wp_enqueue_style( 'memberlitesc_frontend', MEMBERLITESC_URL . '/css/memberlite-shortcodes.css', array(), MEMBERLITESC_VERSION );		
 	}
 }
 add_action( 'wp_enqueue_scripts', 'memberlitesc_init_styles' );
