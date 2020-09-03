@@ -52,7 +52,6 @@ function memberlitesc_check_active_tab( $items = array() ){
 	} else {
 		$cookie_value = $cookie_name;
 	}
-	// var_dump($items);
 	if(!empty($cookie_value) || empty( $items ) ){
 		$memberlite_active_tabs[] = $cookie_value;
 	} else {
