@@ -42,6 +42,7 @@ jQuery( document ).ready( function() {
 		}
 	});	 
 
+
 	jQuery("body").on("click", ".memberlite_active a", function(){
 
 		if( typeof memberlite_postdata !== 'undefined' ){
@@ -59,5 +60,15 @@ jQuery( document ).ready( function() {
 		}
 
 	});
+
+	if( jQuery(".memberlite_accordion-item").length > 0 ){
+		//Accordion is on this page
+		var accordion_id = location.hash;
+		if( accordion_id !== "" ){
+			//Open an accordion
+			jQuery( accordion_id + ' h3' ).click();
+		}
+
+	}
 
 });
