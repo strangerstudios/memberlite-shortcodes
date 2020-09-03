@@ -44,7 +44,7 @@ function memberlitesc_init_styles() {
 	// Only load / enqueue resources if a shortcode is present on the post/page.
 	if ( false === $should_exit ) {
 		wp_enqueue_style( 'font-awesome', MEMBERLITESC_URL . '/font-awesome/css/all.min.css', array(), '5.14.0' );
-		wp_enqueue_script( 'js-cookie', MEMBERLITESC_URL . '/js/js.cookie.js', array(), MEMBERLITESC_VERSION, true );		
+		wp_enqueue_script( 'js-cookie', MEMBERLITESC_URL . '/js/js.cookie.min.js', array(), MEMBERLITESC_VERSION, true );		
 		wp_enqueue_script( 'memberlitesc_js', MEMBERLITESC_URL . '/js/memberlite-shortcodes.js', array( 'jquery' ), MEMBERLITESC_VERSION, true );
 		$memberlite_active_tabs = memberlitesc_check_active_tab();
 		wp_localize_script( 'memberlitesc_js', 'memberlite_postdata', array( 
