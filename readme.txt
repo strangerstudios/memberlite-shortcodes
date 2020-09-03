@@ -3,7 +3,7 @@ Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
 Tested up to: 5.4
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,11 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
+
+= 1.3.4 - 2020-09-03 =
+* BUG FIX: Fixed logic to store active tab in cookie so return page load remembers your last tab.
+* ENHANCEMENT: Added feature to automatically expand the accordion item for an anchor link on page load.
+* ENHANCEMENT: Updated to Font Awesome version 5.14.0
 
 = 1.3.3 - 2020-04-30 =
 * BUG FIX: Fixed display bug for a recent post in shortcode output with no avatar or featured image.
