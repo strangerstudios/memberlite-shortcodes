@@ -46,7 +46,7 @@ function memberlitesc_init_styles() {
 		wp_enqueue_style( 'font-awesome', MEMBERLITESC_URL . '/font-awesome/css/all.min.css', array(), '5.13.0' );
 		wp_enqueue_script( 'js-cookie', 'https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js', array(), MEMBERLITESC_VERSION, true );		
 		wp_enqueue_script( 'memberlitesc_js', MEMBERLITESC_URL . '/js/memberlite-shortcodes.js', array( 'jquery' ), MEMBERLITESC_VERSION, true );
-		global $memberlite_active_tabs;
+		$memberlite_active_tabs = memberlitesc_check_active_tab();
 		wp_localize_script( 'memberlitesc_js', 'memberlite_postdata', array( 
 			'post_id' => $post->ID, 
 			'active_tabs' => count( $memberlite_active_tabs ), 
