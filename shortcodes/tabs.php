@@ -8,20 +8,13 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 		'class' => '',
 		'items' => '',
     ), $atts));
+
 	$items = explode(",",$items);
 	
 	//figure out the active tab and store in a global
-	global $post, $memberlite_active_tabs;
-	if ( empty( $memberlite_active_tabs ) ) {
-		$memberlite_active_tabs = array();
-	}
-	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count($memberlite_active_tabs);
-	if(!empty($_COOKIE[$cookie_name]))
-		$cookie_value = $_COOKIE[$cookie_name];
-	if(!empty($cookie_value))
-		$memberlite_active_tabs[] = $cookie_value;
-	else
-		$memberlite_active_tabs[] = $items[0];
+	global $post;
+
+	
 	
 	//build tab menu
 	$count = '1';
@@ -31,7 +24,8 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 	{	
 		$item_id = sanitize_title_with_dashes($item);
 		$result .= '<li';
-		if($item == $memberlite_active_tabs[count($memberlite_active_tabs)-1])
+		$memberlite_active_tabs = memberlitesc_check_active_tab( array( $item ) );
+		if( in_array( $item, $memberlite_active_tabs ) )
 			$result .= ' class="memberlite_active"';
 		$result .= '><a href="#tab-' . $item_id . '" data-toggle="tab" data-value="#' . $item_id . '">' . $item . '</a></li>';
 	}
@@ -45,6 +39,29 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 remove_shortcode('memberlite_tabs');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_tabs', 'memberlitesc_tabs_shortcode');
 
+function memberlitesc_check_active_tab( $items = array() ){
+
+	global $post;
+
+	$memberlite_active_tabs = array();
+
+	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count($items);
+
+	if(!empty($_COOKIE[$cookie_name])){
+		$cookie_value = $_COOKIE[$cookie_name];
+	} else {
+		$cookie_value = $cookie_name;
+	}
+	if(!empty($cookie_value) || empty( $items ) ){
+		$memberlite_active_tabs[] = $cookie_value;
+	} else {
+		$memberlite_active_tabs[] = $items[0];
+	}
+
+	return $memberlite_active_tabs;
+
+}
+
 function memberlitesc_tab_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
@@ -53,10 +70,11 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
 		'class' => '',
 		'item' => '',
     ), $atts));
-	global $memberlite_active_tabs;
-	$item_id = sanitize_title_with_dashes($item);
+	$memberlite_active_tabs = memberlitesc_check_active_tab( array( $item ) );
+	
+	$item_id = sanitize_title_with_dashes( $item );
     $result = '<div class="memberlite_tab_pane ' . $class;
-	if($item == $memberlite_active_tabs[count($memberlite_active_tabs)-1])
+	if( in_array( $item, $memberlite_active_tabs ) )
 		$result .= ' memberlite_active';
 	$result .= '" id="tab-' . $item_id . '" >';
     $result .= do_shortcode($content);
