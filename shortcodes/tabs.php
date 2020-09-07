@@ -24,7 +24,7 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 	{	
 		$item_id = sanitize_title_with_dashes($item);
 		$result .= '<li';
-		$memberlite_active_tabs = memberlitesc_check_active_tab( array( $item ) );
+		$memberlite_active_tabs = memberlitesc_check_active_tab( $item );
 		if( in_array( $item, $memberlite_active_tabs ) )
 			$result .= ' class="memberlite_active"';
 		$result .= '><a href="#tab-' . $item_id . '" data-toggle="tab" data-value="#' . $item_id . '">' . $item . '</a></li>';
@@ -50,14 +50,21 @@ function memberlitesc_check_active_tab( $items = array() ){
 	if(!empty($_COOKIE[$cookie_name])){
 		$cookie_value = $_COOKIE[$cookie_name];
 	} else {
-		$cookie_value = $cookie_name;
+		if( is_array( $items ) ){
+			$_COOKIE[$cookie_name] = reset( $items );	
+		} else {
+			$_COOKIE[$cookie_name] = $items;
+		}
 	}
-	if(!empty($cookie_value) || empty( $items ) ){
-		$memberlite_active_tabs[] = $cookie_value;
+	if(!empty($cookie_value) ){
+		$memberlite_active_tabs = array( $cookie_value );
 	} else {
-		$memberlite_active_tabs[] = $items[0];
+		if( is_array( $items ) ){
+			$memberlite_active_tabs[] = reset( $items );
+		} else {
+			$memberlite_active_tabs[] = $items;
+		}
 	}
-
 	return $memberlite_active_tabs;
 
 }
@@ -70,7 +77,7 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
 		'class' => '',
 		'item' => '',
     ), $atts));
-	$memberlite_active_tabs = memberlitesc_check_active_tab( array( $item ) );
+	$memberlite_active_tabs = memberlitesc_check_active_tab( $item );
 	
 	$item_id = sanitize_title_with_dashes( $item );
     $result = '<div class="memberlite_tab_pane ' . $class;
