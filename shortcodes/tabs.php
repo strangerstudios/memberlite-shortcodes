@@ -43,6 +43,10 @@ function memberlitesc_check_active_tab( $items = array() ){
 
 	global $post;
 
+	if ( ! is_array( $items ) ) {
+		$items = array($items);
+	}
+
 	$memberlite_active_tabs = array();
 
 	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count($items);
