@@ -8,14 +8,9 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 		'class' => '',
 		'items' => '',
     ), $atts));
-
 	$items = explode(",",$items);
-	
 	//figure out the active tab and store in a global
 	global $post;
-
-	
-	
 	//build tab menu
 	$count = '1';
     $result = '<div class="memberlite_tabbable ' . $class . '">';
@@ -38,20 +33,15 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 }
 remove_shortcode('memberlite_tabs');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_tabs', 'memberlitesc_tabs_shortcode');
-
 function memberlitesc_check_active_tab( $items = array() ){
-
 	global $post;
-
 	$memberlite_active_tabs = array();
-
-	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count($items);
-
+	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count( (array)$items);
 	if(!empty($_COOKIE[$cookie_name])){
-		$cookie_value = $_COOKIE[$cookie_name];
+		$cookie_value = $_COOKIE[$cookie_name];		
 	} else {
 		if( is_array( $items ) ){
-			$_COOKIE[$cookie_name] = reset( $items );	
+			$_COOKIE[$cookie_name] = $items[0];	
 		} else {
 			$_COOKIE[$cookie_name] = $items;
 		}
@@ -60,15 +50,13 @@ function memberlitesc_check_active_tab( $items = array() ){
 		$memberlite_active_tabs = array( $cookie_value );
 	} else {
 		if( is_array( $items ) ){
-			$memberlite_active_tabs[] = reset( $items );
+			$memberlite_active_tabs[] = $items[0];
 		} else {
 			$memberlite_active_tabs[] = $items;
 		}
 	}
 	return $memberlite_active_tabs;
-
 }
-
 function memberlitesc_tab_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
@@ -78,9 +66,9 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
 		'item' => '',
     ), $atts));
 	$memberlite_active_tabs = memberlitesc_check_active_tab( $item );
-	
 	$item_id = sanitize_title_with_dashes( $item );
     $result = '<div class="memberlite_tab_pane ' . $class;
+    // var_dump($item);
 	if( in_array( $item, $memberlite_active_tabs ) )
 		$result .= ' memberlite_active';
 	$result .= '" id="tab-' . $item_id . '" >';

@@ -53,7 +53,7 @@ jQuery( document ).ready( function() {
 				var post_id = memberlite_postdata.post_id;
 				var active_tabs = memberlite_postdata.active_tabs;
 
-			  	Cookies.set('memberlite_active_tabs_'+post_id+'_'+active_tabs, Array( item_name ), { expires: 1, path: '' } );
+			  	Cookies.set('memberlite_active_tabs_'+post_id+'_'+active_tabs, item_name, { expires: 1, path: '' } );
 
 		  	}
 
