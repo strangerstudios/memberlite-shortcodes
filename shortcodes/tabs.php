@@ -68,7 +68,6 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
 	$memberlite_active_tabs = memberlitesc_check_active_tab( $item );
 	$item_id = sanitize_title_with_dashes( $item );
     $result = '<div class="memberlite_tab_pane ' . $class;
-    // var_dump($item);
 	if( in_array( $item, $memberlite_active_tabs ) )
 		$result .= ' memberlite_active';
 	$result .= '" id="tab-' . $item_id . '" >';
