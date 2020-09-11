@@ -1,4 +1,4 @@
-![](memberlite-elements-banner.jpg)
+![](memberlite-shortcodes-banner.jpg)
 
 # [Memberlite Shortcodes](https://memberlitetheme.com/memberlite-shortcodes/) #
 
