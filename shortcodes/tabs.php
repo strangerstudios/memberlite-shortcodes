@@ -1,5 +1,17 @@
 <?php
-// Tabs Content Wrapper
+/**
+ * The memberlite_tabs shortcode.
+ * This shortcode is a wrapper for each
+ * individual membership_tab shortcode.
+ *
+ * Example:
+ * [memberlite_tabs items="Item 1,Item 2"]
+ * [memberlite_tab item="Item 1"]Item 1 tab content.[/memberlite_tab]
+ * [memberlite_tab item="Item 2"]Item 2 tab content.[/memberlite_tab]
+ * [/memberlite_tabs]
+ *
+ * Note: The JS for handling tabs is in the Memberlite theme.
+ */
 function memberlitesc_tabs_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
 	// $content ::= text within enclosing form of shortcode element
@@ -8,14 +20,9 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 		'class' => '',
 		'items' => '',
     ), $atts));
-
 	$items = explode(",",$items);
-	
 	//figure out the active tab and store in a global
 	global $post;
-
-	
-	
 	//build tab menu
 	$count = '1';
     $result = '<div class="memberlite_tabbable ' . $class . '">';
@@ -23,11 +30,7 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 	foreach($items as $item)
 	{	
 		$item_id = sanitize_title_with_dashes($item);
-		$result .= '<li';
-		$memberlite_active_tabs = memberlitesc_check_active_tab( array( $item ) );
-		if( in_array( $item, $memberlite_active_tabs ) )
-			$result .= ' class="memberlite_active"';
-		$result .= '><a href="#tab-' . $item_id . '" data-toggle="tab" data-value="#' . $item_id . '">' . $item . '</a></li>';
+		$result .= '<li><a href="#tab-' . $item_id . '" data-toggle="tab" data-value="#' . $item_id . '">' . $item . '</a></li>';
 	}
 	$result .= '</ul><div class="memberlite_tab_content">';
     $content = str_replace("]<br />", ']', $content);
@@ -39,32 +42,13 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 remove_shortcode('memberlite_tabs');	//replace shortcode bundled with Memberlite 2.0 and prior or anywhere else
 add_shortcode('memberlite_tabs', 'memberlitesc_tabs_shortcode');
 
-function memberlitesc_check_active_tab( $items = array() ){
-
-	global $post;
-
-	if ( ! is_array( $items ) ) {
-		$items = array($items);
-	}
-
-	$memberlite_active_tabs = array();
-
-	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count($items);
-
-	if(!empty($_COOKIE[$cookie_name])){
-		$cookie_value = $_COOKIE[$cookie_name];
-	} else {
-		$cookie_value = $cookie_name;
-	}
-	if(!empty($cookie_value) || empty( $items ) ){
-		$memberlite_active_tabs[] = $cookie_value;
-	} else {
-		$memberlite_active_tabs[] = $items[0];
-	}
-
-	return $memberlite_active_tabs;
-
-}
+/**
+ * The memberlite_tab shortcode.
+ * These shortcodes should be inside of a memberlite_tabs shortcode.
+ *
+ * Example:
+ * [memberlite_tab class="tab1" item="Tab 1"]Tab content.[/memberlite_tab]
+ */
 
 function memberlitesc_tab_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
@@ -74,12 +58,8 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
 		'class' => '',
 		'item' => '',
     ), $atts));
-	$memberlite_active_tabs = memberlitesc_check_active_tab( array( $item ) );
-	
 	$item_id = sanitize_title_with_dashes( $item );
     $result = '<div class="memberlite_tab_pane ' . $class;
-	if( in_array( $item, $memberlite_active_tabs ) )
-		$result .= ' memberlite_active';
 	$result .= '" id="tab-' . $item_id . '" >';
     $result .= do_shortcode($content);
     $result .= '</div>';
