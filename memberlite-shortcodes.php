@@ -16,7 +16,7 @@ define( 'MEMBERLITESC_VERSION', '1.3.4' );
  * Load text domain
  */
 function pmprobb_load_plugin_text_domain() {
-	load_plugin_textdomain( 'pmpro-bbpress', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
+	load_plugin_textdomain( 'memberlite-shortcodes', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
 }
 add_action( 'plugins_loaded', 'pmprobb_load_plugin_text_domain' );
 
