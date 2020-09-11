@@ -12,7 +12,7 @@ For sites running the [Memberlite Theme](https://memberlitetheme.com/) or a Memb
 For more information please visit [the shortcodes documentation page at the Memberlite Theme website](https://memberlitetheme.com/memberlite-shortcodes/).
 
 ## Installation ##
-For detailed installation steps, visit the our [documentation](https://memberlitetheme.com/memberlite-shortcodes/) page.
+For detailed installation steps, visit the [documentation](https://memberlitetheme.com/memberlite-shortcodes/) page.
 
 1. Download the current development ZIP file directly: `https://github.com/strangerstudios/memberlite-shortcodes/archive/dev.zip`
 
