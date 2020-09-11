@@ -2,7 +2,7 @@
 
 # [Memberlite Shortcodes](https://memberlitetheme.com/memberlite-shortcodes/) #
 
-![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dy/memberlite-shortcodes?style=flat-square) ![Travis (.org)](https://img.shields.io/travis/strangerstudios/memberlite-shortcodes?style=flat-square) ![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg?style=flat-square)
+![WordPress Plugin Downloads](https://img.shields.io/wordpress/plugin/dy/memberlite-shortcodes?style=flat-square)  ![License](https://img.shields.io/badge/license-GPL--2.0%2B-red.svg?style=flat-square)
 
 ### Welcome to the Memberlite Shortcodes GitHub Repository
 For sites running the [Memberlite Theme](https://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
