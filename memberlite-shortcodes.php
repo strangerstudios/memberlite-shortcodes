@@ -15,10 +15,10 @@ define( 'MEMBERLITESC_VERSION', '1.3.4' );
 /**
  * Load text domain
  */
-function pmprobb_load_plugin_text_domain() {
+function memberlitesc_load_plugin_text_domain() {
 	load_plugin_textdomain( 'memberlite-shortcodes', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
 }
-add_action( 'plugins_loaded', 'pmprobb_load_plugin_text_domain' );
+add_action( 'plugins_loaded', 'memberlitesc_load_plugin_text_domain' );
 
 /**
  * Enqueue Stylesheets and Javascript
