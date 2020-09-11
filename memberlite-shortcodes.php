@@ -6,6 +6,8 @@ Description: Shortcodes designed to work with the Memberlite Theme and Memberlit
 Version: 1.3.4
 Author: Stranger Studios
 Author URI: https://memberlitetheme.com
+Text Domain: memberlite-shortcodes
+Domain Path: /languages
 */
 
 define( 'MEMBERLITESC_DIR', dirname( __FILE__ ) );
