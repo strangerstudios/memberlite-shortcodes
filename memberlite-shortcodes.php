@@ -6,11 +6,21 @@ Description: Shortcodes designed to work with the Memberlite Theme and Memberlit
 Version: 1.3.4
 Author: Stranger Studios
 Author URI: https://memberlitetheme.com
+Text Domain: memberlite-shortcodes
+Domain Path: /languages
 */
 
 define( 'MEMBERLITESC_DIR', dirname( __FILE__ ) );
 define( 'MEMBERLITESC_URL', plugins_url( '', __FILE__ ) );
 define( 'MEMBERLITESC_VERSION', '1.3.4' );
+
+/**
+ * Load text domain
+ */
+function pmprobb_load_plugin_text_domain() {
+	load_plugin_textdomain( 'pmpro-bbpress', false, basename( dirname( __FILE__ ) ) . '/languages' ); 
+}
+add_action( 'plugins_loaded', 'pmprobb_load_plugin_text_domain' );
 
 /**
  * Enqueue Stylesheets and Javascript
