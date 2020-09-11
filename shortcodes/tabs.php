@@ -9,6 +9,8 @@
  * [memberlite_tab item="Item 1"]Item 1 tab content.[/memberlite_tab]
  * [memberlite_tab item="Item 2"]Item 2 tab content.[/memberlite_tab]
  * [/memberlite_tabs]
+ *
+ * Note: The JS for handling tabs is in the Memberlite theme.
  */
 function memberlitesc_tabs_shortcode($atts, $content = null) {
 	// $atts    ::= array of attributes
@@ -70,28 +72,3 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
     return force_balance_tags($result);
 }
 add_shortcode('memberlite_tab', 'memberlitesc_tab_shortcode');
-
-function memberlitesc_check_active_tab( $items = array() ){
-	global $post;
-	$memberlite_active_tabs = array();
-	$cookie_name = 'memberlite_active_tabs_' . $post->ID . '_' . count( (array)$items);
-	if(!empty($_COOKIE[$cookie_name])){
-		$cookie_value = $_COOKIE[$cookie_name];		
-	} else {
-		if( is_array( $items ) ){
-			$_COOKIE[$cookie_name] = $items[0];	
-		} else {
-			$_COOKIE[$cookie_name] = $items;
-		}
-	}
-	if(!empty($cookie_value) ){
-		$memberlite_active_tabs = array( $cookie_value );
-	} else {
-		if( is_array( $items ) ){
-			$memberlite_active_tabs[] = $items[0];
-		} else {
-			$memberlite_active_tabs[] = $items;
-		}
-	}
-	return $memberlite_active_tabs;
-}
