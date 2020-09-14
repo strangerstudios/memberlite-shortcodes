@@ -2,7 +2,7 @@
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
-Tested up to: 5.5
+Tested up to: 5.5.1
 Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ A set of shortcodes designed enhance the appearance of your content with the Mem
 = Shortcodes to enhance the appearance of your membership site =
 For sites running the [Memberlite Theme](https://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
 
-[Memberlite](https://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars and more global layout settings.
+[Memberlite](https://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars, and more global layout settings.
 
 = [memberlite_accordion] Shortcode =
 Add an accordion block with collapsible sections using this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/accordion/)
@@ -80,10 +80,13 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
-= 1.3.4 - 2020-09-03 =
-* BUG FIX: Fixed logic to store active tab in cookie so return page load remembers your last tab.
-* ENHANCEMENT: Added feature to automatically expand the accordion item for an anchor link on page load.
-* ENHANCEMENT: Updated to Font Awesome version 5.14.0
+= 1.3.4 - 2020-09-14 =
+* BUG FIX/ENHANCEMENT: Fixed issue with localization to allow for proper translation.
+* BUG FIX/ENHANCEMENT: Improved the tabs shortcode to allow for hyperlink to a targeted tab and set as active.
+* BUG FIX/ENHANCEMENT: Improved the accordion shortcode to allow for hyperlink to a targeted accordion item and set as active.
+* BUG FIX: Removed code that was behaving inconsistently to set a cookie based on the last active tab visited.
+* ENHANCEMENT: Now using version 5.14.0 of Font Awesome.
+* ENHANCEMENT: Now tested up to WordPress 5.5.
 
 = 1.3.3 - 2020-04-30 =
 * BUG FIX: Fixed display bug for a recent post in shortcode output with no avatar or featured image.
