@@ -80,10 +80,13 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
-= 1.3.4 - 2020-09-03 =
-* BUG FIX: Fixed logic to store active tab in cookie so return page load remembers your last tab.
-* ENHANCEMENT: Added feature to automatically expand the accordion item for an anchor link on page load.
-* ENHANCEMENT: Updated to Font Awesome version 5.14.0
+= 1.3.4 - 2020-09-14 =
+* BUG FIX/ENHANCEMENT: Fixed issue with localization to allow for proper translation.
+* BUG FIX/ENHANCEMENT: Improved the tabs shortcode to allow for hyperlink to a targeted tab and set as active.
+* BUG FIX/ENHANCEMENT: Improved the accordion shortcode to allow for hyperlink to a targeted accordion item and set as active.
+* BUG FIX: Removed code that was behaving inconsistently to set a cookie based on the last active tab visited.
+* ENHANCEMENT: Now using version 5.14.0 of Font Awesome.
+* ENHANCEMENT: Now tested up to WordPress 5.5.
 
 = 1.3.3 - 2020-04-30 =
 * BUG FIX: Fixed display bug for a recent post in shortcode output with no avatar or featured image.
