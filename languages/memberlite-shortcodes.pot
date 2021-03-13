@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: info@paidmembershipspro.com\n"
-"POT-Creation-Date: 2020-09-11 18:01+0200\n"
+"POT-Creation-Date: 2021-03-14 03:20+1100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: shortcodes/recent_posts.php:52
+#: shortcodes/recent_posts.php:52 shortcodes/recent_posts.php:52
 msgid ""
 "There was a problem fetching posts for the current user. Please try again "
 "later."
 msgstr ""
 
-#: shortcodes/recent_posts.php:65
+#: shortcodes/recent_posts.php:65 shortcodes/recent_posts.php:65
 msgid ""
 "No posts found for this user. Please ensure the author's name/ID is correct."
 msgstr ""
 
-#: shortcodes/signup.php:47
+#: shortcodes/signup.php:47 shortcodes/signup.php:47
 #, php-format
 msgid ""
 "You are logged in as <strong>%s</strong>. If you would like to use a "
