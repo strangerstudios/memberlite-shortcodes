@@ -2,8 +2,8 @@
 Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 4.0
-Tested up to: 5.6
-Stable tag: 1.3.4
+Tested up to: 5.7
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,9 +80,10 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 
 == Changelog ==
 
-= 1.3.5 - YYYY-MM-DD =
-* ENHANCEMENT: Now using version 5.15.1 of Font Awesome.
-* ENHANCEMENT: Now tested up to WordPress 5.6.
+= 1.3.5 - 2021-03-13 =
+* ENHANCEMENT: Updated to Font Awesome version 5.15.1.
+* ENHANCEMENT: Tested up to WordPress 5.7.
+* BUG FIX/ENHANCEMENT: Improved appearance of "link" style buttons.
 
 = 1.3.4 - 2020-09-14 =
 * BUG FIX/ENHANCEMENT: Fixed issue with localization to allow for proper translation.
