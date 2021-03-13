@@ -63,12 +63,13 @@
 .btn_error:hover {background-color: #c9302c; }
 .btn_alert:hover {background-color: #ec971f; }
 
+/* Link-style button */
 .btn_link {
 	background: none;
-    border: none;
-    box-shadow: none;
+	border: none;
+	box-shadow: none;
 	color: #2C3E50;
-	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type ‘input’ and others */
 	display: inline-block;
 	font-style: normal;
 	font-weight: 400;
@@ -78,6 +79,9 @@
 	text-shadow: none;
 }
 .btn_link:hover {
+	background: none;
+	box-shadow: none;
+	transform: none;
 	text-decoration: underline;
 }
 .btn_block,
