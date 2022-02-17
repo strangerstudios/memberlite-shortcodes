@@ -3,7 +3,7 @@ Contributors: kimannwall, strangerstudios
 Tags: theme, shortcodes, memberlite, membership, pmpro, paid memberships pro
 Requires at least: 5.2
 Tested up to: 5.9
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,6 +79,11 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
+
+= 1.3.6 - XXXX-XX-XX =
+* BUG FIX/ENHANCEMENT: Only load some CSS for shortcodes for sites not using Memberlite theme.
+* ENHANCEMENT: Updated to Font Awesome version 5.15.4.
+* ENHANCEMENT: Tested up to WordPress 5.9.
 
 = 1.3.5 - 2021-03-13 =
 * ENHANCEMENT: Updated to Font Awesome version 5.15.1.
