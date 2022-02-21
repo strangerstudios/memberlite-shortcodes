@@ -12,7 +12,7 @@ Domain Path: /languages
 
 define( 'MEMBERLITESC_DIR', dirname( __FILE__ ) );
 define( 'MEMBERLITESC_URL', plugins_url( '', __FILE__ ) );
-define( 'MEMBERLITESC_VERSION', '1.3.5' );
+define( 'MEMBERLITESC_VERSION', '1.3.5.1' );
 
 /**
  * Load text domain
