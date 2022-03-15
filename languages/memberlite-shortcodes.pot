@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: info@paidmembershipspro.com\n"
-"POT-Creation-Date: 2021-03-14 03:20+1100\n"
+"POT-Creation-Date: 2022-03-15 14:36-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,4 +33,32 @@ msgstr ""
 msgid ""
 "You are logged in as <strong>%s</strong>. If you would like to use a "
 "different account for this membership, <a href=\"%s\">log out now</a>."
+msgstr ""
+
+#: shortcodes/signup.php:55
+msgid "Username"
+msgstr ""
+
+#: shortcodes/signup.php:60
+msgid "Password"
+msgstr ""
+
+#: shortcodes/signup.php:67
+msgid "Confirm Password"
+msgstr ""
+
+#: shortcodes/signup.php:73
+msgid "E-mail Address"
+msgstr ""
+
+#: shortcodes/signup.php:80
+msgid "Confirm E-mail"
+msgstr ""
+
+#: shortcodes/signup.php:86
+msgid "Full Name"
+msgstr ""
+
+#: shortcodes/signup.php:87
+msgid "LEAVE THIS BLANK"
 msgstr ""
