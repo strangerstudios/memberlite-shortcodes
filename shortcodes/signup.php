@@ -44,7 +44,7 @@ function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 				{
 					?>
 					<p id="pmpro_account_loggedin">
-						<?php printf(__('You are logged in as <strong>%s</strong>. If you would like to use a different account for this membership, <a href="%s">log out now</a>.', 'pmpro'), $current_user->user_login, wp_logout_url($_SERVER['REQUEST_URI'])); ?>			
+						<?php printf(__('You are logged in as <strong>%s</strong>. If you would like to use a different account for this membership, <a href="%s">log out now</a>.', 'memberlite-shortcodes'), $current_user->user_login, wp_logout_url($_SERVER['REQUEST_URI'])); ?>			
 					</p>
 					<?php
 				}
@@ -52,39 +52,39 @@ function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 				{
 					?>
 					<div>
-						<label for="username">Username</label>
+						<label for="username"><?php esc_html_e( 'Username', 'memberlite-shortcodes' ); ?></label>
 						<input id="username" name="username" type="text" class="input" size="30" value="" /> 
 					</div>
 					<?php do_action("pmpro_checkout_after_username");?>
 					<div>
-						<label for="password">Password</label>
+						<label for="password"><?php esc_html_e( 'Password', 'memberlite-shortcodes' ); ?></label>
 						<input id="password" name="password" type="password" class="input" size="30" value="" /> 
 					</div>
 					<?php if($short) { ?>
 						<input type="hidden" name="password2_copy" value="1" />
 					<?php } else { ?>
 						<div>
-							<label for="password2">Confirm Password</label>
+							<label for="password2"><?php esc_html_e( 'Confirm Password', 'memberlite-shortcodes' ); ?></label>
 							<input id="password2" name="password2" type="password" class="input" size="30" value="" /> 
 						</div>			
 					<?php } ?>
 					<?php do_action("pmpro_checkout_after_password");?>
 					<div>
-						<label for="bemail">E-mail Address</label>
+						<label for="bemail"><?php esc_html_e( 'E-mail Address', 'memberlite-shortcodes' ); ?></label>
 						<input id="bemail" name="bemail" type="email" class="input" size="30" value="" /> 
 					</div>
 					<?php if($short) { ?>
 						<input type="hidden" name="bconfirmemail_copy" value="1" />
 					<?php } else { ?>
 						<div>
-							<label for="bconfirmemail">Confirm E-mail</label>
+							<label for="bconfirmemail"><?php esc_html_e( 'Confirm E-mail', 'memberlite-shortcodes' ); ?></label>
 							<input id="bconfirmemail" name="bconfirmemail" type="email" class="input" size="30" value="" /> 
 						</div>	         
 					<?php } ?>
 					<?php do_action("pmpro_checkout_after_email");?>
 					<div class="pmpro_hidden">
-						<label for="fullname">Full Name</label>
-						<input id="fullname" name="fullname" type="text" class="input" size="30" value="" /> <strong>LEAVE THIS BLANK</strong>
+						<label for="fullname"><?php esc_html_e( 'Full Name', 'memberlite-shortcodes' ); ?></label>
+						<input id="fullname" name="fullname" type="text" class="input" size="30" value="" /> <strong><?php esc_html_e( 'LEAVE THIS BLANK', 'memberlite-shortcodes' ); ?></strong>
 					</div>
 					
 					<div class="pmpro_captcha">
