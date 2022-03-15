@@ -35,5 +35,4 @@ There are various **ways to help development** of Memberlite Shortcodes:
 Here are some ways for **non-developers to contribute** to Memberlite Shortcodes:
 
 1. Translate Memberlite Shortcodes into your own [language](https://translate.wordpress.org/projects/wp-plugins/memberlite-shortcodes/).
-2. [Purchase a Memberlite Support membership](https://memberlitetheme.com/pricing/) to help fund ongoing development and bug fixes.
-3. Leave an honest review for [Memberlite Shortcodes](https://wordpress.org/support/plugin/memberlite-shortcodes/reviews/#new-post).
+2. Leave an honest review for [Memberlite Shortcodes](https://wordpress.org/support/plugin/memberlite-shortcodes/reviews/#new-post).
