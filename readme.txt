@@ -81,6 +81,7 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 == Changelog ==
 
 = 1.3.6 - 2022-03-15 =
+* BUG FIX: Fixed a few strings that we not prepared for localization.
 * BUG FIX/ENHANCEMENT: Only load some CSS for shortcodes for sites not using Memberlite theme.
 * ENHANCEMENT: Updated to Font Awesome version 6.0.
 * ENHANCEMENT: Tested up to WordPress 5.9.2.
