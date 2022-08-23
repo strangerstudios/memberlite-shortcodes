@@ -24,6 +24,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 		'post_parent' => $post->ID,
 		'show' => 'excerpt',
 		'show_children' => false,
+		'show_children_depth' => null,
 		'tag_id' => null,
 		'thumbnail' => false,
 	), $atts) );
@@ -36,6 +37,10 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 
 	if ( $show_children == '0' || $show_children == 'false' || $show_children == 'no' ) {
 		$show_children = false;
+	}
+
+	if ( ! isset( $show_children_depth ) ) {
+		$show_children_depth = '-1';
 	}
 
 	if ( $post_parent == '-1' || $post_parent == 'any' || $post_parent == 'none' ) {
@@ -214,7 +219,7 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 			if ( ! empty( $show_children ) ) {
 				$r .= '<ul class="memberlite_subpagelist_children">';
 				$r .= '<li class="page_item page-item-' . $post->ID . '"><a href="' . get_permalink() . '" rel="bookmark">' . the_title( '', '', false ) . '</a></li>';
-				$r .= wp_list_pages( array( 'child_of' => $post->ID, 'depth' => '-1', 'echo' => false, 'exclude' => $exclude, 'sort_column' => 'menu_order', 'title_li' => '' ) );
+				$r .= wp_list_pages( array( 'child_of' => $post->ID, 'depth' => $show_children_depth, 'echo' => false, 'exclude' => $exclude, 'sort_column' => 'menu_order', 'title_li' => '' ) );
 				$r .= '</ul>';
 			}
 
