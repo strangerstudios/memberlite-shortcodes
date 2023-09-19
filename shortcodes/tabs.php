@@ -20,7 +20,7 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
 	// figure out the active tab and store in a global
 	
 	// wrapping div
-    $result = '<div class="memberlite_tabbable ' . $class . '">';
+    $result = '<div class="memberlite_tabbable ' . esc_attr( $class ) . '">';
     
     // tabs
     $result .= '<ul class="memberlite_tabs">';
@@ -34,7 +34,7 @@ function memberlitesc_tabs_shortcode($atts, $content = null) {
             $memberlite_active_tabs[] = $item;
             $count++;
         }
-        $result .= '><a href="#tab-' . $item_id . '" data-toggle="tab" data-value="#' . $item_id . '">' . $item . '</a></li>';
+        $result .= '><a href="#tab-' . esc_attr( $item_id ) . '" data-toggle="tab" data-value="#' . esc_attr( $item_id ) . '">' . esc_html( $item ) . '</a></li>';
 	}
 	$result .= '</ul>';
     
@@ -68,11 +68,11 @@ function memberlitesc_tab_shortcode($atts, $content = null) {
 		'item' => '',
     ), $atts));
 	$item_id = sanitize_title_with_dashes( $item );
-    $result = '<div class="memberlite_tab_pane ' . $class;
+    $result = '<div class="memberlite_tab_pane ' . esc_attr( $class );
     if($item == $memberlite_active_tabs[count($memberlite_active_tabs)-1]) {
         $result .= ' memberlite_active';
     }
-	$result .= '" id="tab-' . $item_id . '" >';
+	$result .= '" id="tab-' . esc_attr( $item_id ) . '" >';
     $result .= do_shortcode($content);
     $result .= '</div>';
     return force_balance_tags($result);

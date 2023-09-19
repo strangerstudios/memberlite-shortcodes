@@ -36,14 +36,14 @@ function memberlitesc_btn_shortcode($atts, $content = null) {
 		$class = trim('btn ' . implode(' ', $style_classes) . ' ' . $class);
 	}
 
-	$r = '<a class="' . $class . '" href="' . $href . '" target="_' . $target . '">';
+	$r = '<a class="' . esc_attr( $class ) . '" href="' . esc_url( $href ) . '" target="_' . esc_attr( $target ) . '">';
 
 	if( !empty( $icon ) && ( empty($icon_position) || ($icon_position == 'before') ) ) {
-        $r .= '<i class="' . $icon_class . ' fa-' . $icon . '"></i>';
+        $r .= '<i class="' . esc_attr( $icon_class ) . ' fa-' . esc_attr( $icon ) . '"></i>';
 	}
     $r .= $text;
 	if( !empty( $icon ) && ( $icon_position == 'after' ) ) {
-		$r .= '<i class="' . $icon_class . ' fa-' . $icon . '"></i>';
+		$r .= '<i class="' . esc_attr( $icon_class ) . ' fa-' . esc_attr( $icon ) . '"></i>';
 	}
     $r .= '</a>';
     return $r;

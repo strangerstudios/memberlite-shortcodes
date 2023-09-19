@@ -83,9 +83,9 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 	query_posts( $query_args );
 
 	if(!empty($title))
-		$r .= '<h1>' . $title . '</h1>';
+		$r .= '<h1>' . wp_kses_post( $title ) . '</h1>';
 	if(!empty($subtitle))
-		$r .= '<p class="subtitle">' . $subtitle . '</p>';
+		$r .= '<p class="subtitle">' . wp_kses_post( $subtitle ) . '</p>';
 
 	$r .= '<div class="row">';
 
@@ -106,7 +106,7 @@ function memberlitesc_recent_posts_shortcode_handler($atts, $content=null, $code
 	if ( have_posts() ) : while ( have_posts() ) : the_post();
 		$counter++;
 
-		$r .= '<div class="' . $colclass . ' columns ';
+		$r .= '<div class="' . esc_attr( $colclass ) . ' columns ';
 		if ( has_post_thumbnail() || ! empty( $show_avatar ) ) {
 			$r .= ' widget_has_thumbnail';
 		} else {
