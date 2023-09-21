@@ -4,7 +4,7 @@
 jQuery( document ).ready( function() {
 
 	//show accordion content when clicked
-	jQuery('.memberlite_accordion-item h3').click(function(e) {
+	jQuery('.memberlite_accordion-item h2').click(function(e) {
 		
 		var accordion_trigger, accordion, accordion_wrapper;
 
@@ -47,7 +47,7 @@ jQuery( document ).ready( function() {
 		var accordion_id = location.hash;
 		if( accordion_id !== "" ){
 			//Open an accordion
-			jQuery( accordion_id + ' h3' ).click();
+			jQuery( accordion_id + ' h2' ).click();
 		}
 
 	}
