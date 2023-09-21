@@ -21,21 +21,21 @@
 
 /* [memberlite_accordion] Shortcode */
 .memberlite_accordion {}
-.memberlite_accordion h3,
-.entry-content .memberlite_accordion h3 {
+.memberlite_accordion h2,
+.entry-content .memberlite_accordion h2 {
 	border-top: 1px solid #CCC;
 	cursor: pointer;
 	margin: 0;
 	padding: 1.45rem;
 }
-.memberlite_accordion h3:before {
+.memberlite_accordion h2:before {
 	content: "\f078";
 	float: right;
 	font-family: 'Font Awesome 5 Free';
 	font-weight: 700;
 	margin: 0 1.45rem;
 }
-.memberlite_accordion-item.memberlite_accordion-active h3:before {
+.memberlite_accordion-item.memberlite_accordion-active h2:before {
 	content: "\f077";
 }
 .memberlite_accordion .memberlite_accordion-item-content {
