@@ -168,9 +168,9 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 						$r .= '<div class="large-2 text-center columns">';
 					}
 					if ( $link ) {
-						$r .= '<a href="' . get_permalink() . '"><i class="' . $memberlite_page_icon_class . ' fa-5x fa-' . $memberlite_page_icon . '"></i></a>';
+						$r .= '<a href="' . get_permalink() . '"><i class="' . esc_attr( $memberlite_page_icon_class ) . ' fa-5x fa-' . esc_attr( $memberlite_page_icon ) . '"></i></a>';
 					} else {
-						$r .= '<i class="' . $memberlite_page_icon_class . ' fa-5x fa-' . $memberlite_page_icon . '"></i>';
+						$r .= '<i class="' . esc_attr( $memberlite_page_icon_class ) . ' fa-5x fa-' . esc_attr( $memberlite_page_icon ) . '"></i>';
 					}
 					if ( $layout == '3col' || $layout == '4col' ) {
 						$r .= '</div><div class="row"><div class="large-12 columns">';
@@ -218,14 +218,14 @@ function memberlitesc_subpagelist_shortcode_handler( $atts, $content = null, $co
 
 			if ( ! empty( $show_children ) ) {
 				$r .= '<ul class="memberlite_subpagelist_children">';
-				$r .= '<li class="page_item page-item-' . $post->ID . '"><a href="' . get_permalink() . '" rel="bookmark">' . the_title( '', '', false ) . '</a></li>';
+				$r .= '<li class="page_item page-item-' . intval( $post->ID ) . '"><a href="' . get_permalink() . '" rel="bookmark">' . the_title( '', '', false ) . '</a></li>';
 				$r .= wp_list_pages( array( 'child_of' => $post->ID, 'depth' => $show_children_depth, 'echo' => false, 'exclude' => $exclude, 'sort_column' => 'menu_order', 'title_li' => '' ) );
 				$r .= '</ul>';
 			}
 
 			if ( $link ) {
 				$r .= '<a class="more-link" href="' . get_permalink() . '" rel="bookmark">';
-				$r .= $link_text;
+				$r .= esc_html( $link_text );
 				$r .= '</a>';
 			}
 

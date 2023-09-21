@@ -43,9 +43,9 @@ function memberlitesc_col_shortcode($atts, $content = null) {
     $classes = array();
     foreach ($arr as $k => $aa) {
 		if(!empty(${$aa}))
-			$classes[] = $k.'-' . ${$aa};
+			$classes[] = $k.'-' . esc_attr( ${$aa} );
     }
-    $result = '<div class="' . implode(' ', $classes) . ' ' . $class . ' columns">';
+    $result = '<div class="' . implode(' ', $classes) . ' ' . esc_attr( $class ) . ' columns">';
     $result .= do_shortcode($content);
     $result .= '</div>';
     return force_balance_tags($result);

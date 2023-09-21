@@ -25,15 +25,15 @@ function memberlitesc_banner_shortcode($atts, $content = null) {
     }
 	$r .= '<div class="row"><div class="medium-12 columns';
 	if($align)
-		$r .= ' text-' . $align;
+		$r .= ' text-' . esc_attr( $align );
 	$r .= '"';
 	if(preg_match('/^#[a-f0-9]{6}$/i', $color)) 
-		$r .= ' style="color: ' . $color . '"';
+		$r .= ' style="color: ' . esc_attr( $color ) . '"';
 	elseif(preg_match('/^[a-f0-9]{6}$/i', $color))
-		$r .= ' style="color: #' . $color . '"';
+		$r .= ' style="color: #' . esc_attr( $color ) . '"';
 	$r .= '>';
 	if(!empty($title))
-		$r .= '<h2>' . $title . '</h2>';
+		$r .= '<h2>' . wp_kses_post( $title ) . '</h2>';
     $r .= apply_filters('the_content', $content);
     $r .= '</div></div></div>';
     return $r;

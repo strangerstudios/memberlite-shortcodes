@@ -38,7 +38,7 @@ function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 				if(!empty($intro))
 					echo wpautop($intro);
 			?>
-			<input type="hidden" id="level" name="level" value="<?php echo $level; ?>" />
+			<input type="hidden" id="level" name="level" value="<?php echo esc_attr( $level ); ?>" />
 			<?php
 				if(!empty($current_user->ID))
 				{
@@ -102,7 +102,7 @@ function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 			<div>
 				<span id="pmpro_submit_span" >
 					<input type="hidden" name="submit-checkout" value="1" />		
-					<input type="submit" class="pmpro_btn pmpro_btn-submit-checkout" value="<?php echo $submit_button; ?>" />
+					<input type="submit" class="pmpro_btn pmpro_btn-submit-checkout" value="<?php echo esc_attr( $submit_button ); ?>" />
 				</span>
 			</div>	
 		</form>

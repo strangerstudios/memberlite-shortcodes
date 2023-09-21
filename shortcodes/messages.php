@@ -7,8 +7,8 @@ function memberlitesc_msg_shortcode($atts, $content = null) {
 		'style' => 'default',
 		'text' => 'Message Text'
     ), $atts));
-	$r = '<p class="pmpro_message pmpro_' . $style . '">';
-    $r .= $text;
+	$r = '<p class="pmpro_message pmpro_' . esc_attr( $style ) . '">';
+    $r .= wp_kses_post( $text );
     $r .= '</p>';
     return $r;
 }
