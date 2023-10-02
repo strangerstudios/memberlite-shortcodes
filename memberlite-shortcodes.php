@@ -58,7 +58,7 @@ function memberlitesc_init_styles() {
 		wp_enqueue_style( 'memberlitesc_frontend', MEMBERLITESC_URL . '/css/memberlite-shortcodes.css', array(), MEMBERLITESC_VERSION );
 		if ( ! defined( 'MEMBERLITE_VERSION' ) ) {
 			wp_enqueue_style( 'memberlitesc_frontend_extras', MEMBERLITESC_URL . '/css/memberlite-shortcodes-extras.css', array(), MEMBERLITESC_VERSION );
-			wp_enqueue_style( 'font-awesome', MEMBERLITESC_URL . '/font-awesome/css/all.min.css', array(), '6.4' );
+			wp_enqueue_style( 'font-awesome', MEMBERLITESC_URL . '/font-awesome/css/all.min.css', array(), '6.4.2' );
 		}
 	}
 }
