@@ -36,7 +36,13 @@ function memberlitesc_accordion_item_shortcode( $atts, $content = null ) {
 	static $count = 0;
 	$count++;
 	$result = '<div id="memberlite_accordion-item_' . $count . '" class="memberlite_accordion-item ' . $class . '">';
+	$result .= '<div class="container">';
 	$result .= '<h2>' . wp_kses_post( $title ) . '</h2>';
+	$result .= '<div class="icon-container">';
+	$result .= '<div class="dash-one"></div>';
+	$result .= '<div class="dash-two"></div>';
+	$result .= '</div>';
+	$result .= '</div>';
 	$result .= '<div class="memberlite_accordion-item-content">';
 	$result .= do_shortcode( $content );
 	$result .= '</div></div>';
