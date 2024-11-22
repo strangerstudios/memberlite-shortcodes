@@ -78,7 +78,8 @@ Some of the shortcodes in this plugin will work with any theme, but we cannot gu
 == Changelog ==
 
 = 1.4 - 2024-11-22 =
-* SECURITY: Sanitized and escaped shortcode attributes in the Accordion shortcode.
+* SECURITY: Sanitized and escaped shortcode attributes in the Accordion shortcode. (Peter Thaleikis)
+* BUG FIX: Fixed a translation issue in the Recent Posts shortcode.
 * DEPRECATED: Marking the [memberlite_signup] shortcode as deprecated. Use the Signup Shortcode Add On for Paid Memberships Pro instead.
 
 = 1.3.9 - 2023-09-21 =
