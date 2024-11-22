@@ -1,11 +1,12 @@
 === Memberlite Shortcodes ===
 Contributors: kimannwall, strangerstudios
-Tags: theme, shortcodes, memberlite, membership, paid memberships pro
-Requires at least: 5.3
-Tested up to: 6.5
-Stable tag: 1.3.9
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: theme, shortcodes, memberlite, membership
+Requires at least: 5.4
+Tested up to: 6.7
+Requires PHP: 5.6
+Stable tag: 1.4
+License: GPLv3
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 A set of shortcodes designed enhance the appearance of your content with the Memberlite Theme.
 
@@ -13,7 +14,7 @@ A set of shortcodes designed enhance the appearance of your content with the Mem
 = Shortcodes to enhance the appearance of your membership site =
 For sites running the [Memberlite Theme](https://memberlitetheme.com/) or a Memberlite Child Theme, this plugin offers several shortcodes to simplify the use of various display elements and enhance the appearance of your site content.
 
-[Memberlite](https://memberlitetheme.com) is the ideal theme for your membership site - packed with integration for top membership site plugins including [Paid Memberships Pro](https://wordpress.org/plugins/paid-memberships-pro/). It's fully customizable with your logo, colors, fonts, custom sidebars, and more global layout settings.
+[Memberlite](https://memberlitetheme.com) is the ideal theme for your [Paid Memberships Pro](https://www.paidmembershipspro.com) site. It's fully customizable with your logo, colors, fonts, custom sidebars, and more global layout settings.
 
 = [memberlite_accordion] Shortcode =
 Add an accordion block with collapsible sections using this simple shortcode. [more info](https://memberlitetheme.com/memberlite-shortcodes/accordion/)
@@ -29,9 +30,6 @@ Insert a stylized contextual message block with styling for default, info, alert
 
 = [memberlite_recent_posts] Shortcode =
 Designed to be used on the homepage, this shortcode displays the newest posts or a defined category of posts accoriding to your shortcode settings. [more info](https://memberlitetheme.com/memberlite-shortcodes/recent-posts/)
-
-= [memberlite_signup] Shortcode =
-If you're using [Paid Memberships Pro](https://www.paidmembershipspro.com), this shortcode will display a block with signup fields for a specific membership level. [more info](https://memberlitetheme.com/memberlite-shortcodes/membership-signup-block/)
 
 = [memberlite_subpagelist] Shortcode =
 Easily create a digest view of a given pages' subpages, with an excerpt or the full page content, in the order you define. [more info](https://memberlitetheme.com/memberlite-shortcodes/subpagelist/)
@@ -65,7 +63,6 @@ Browse the Memberlite Shortcodes documentation to see all shortcodes, their attr
 == Screenshots ==
 1. Demo of the Recent Posts shortcode [memberlite_recent_posts] with featured images, excerpts, and a three-column layout.
 2. Demo of the [memberlite_subpagelist] shortcode in a column layout and demo of the [fa] icons.
-3. Demo of the [memberlite_signup] shortcode for a Paid Memberships Pro membership level in a two-column layout using the [memberlite_banner] with the "body" background.
 
 == Frequently Asked Questions ==
 
@@ -79,6 +76,10 @@ Visit https://memberlitetheme.com to get your copy of the Memberlite Theme.
 Some of the shortcodes in this plugin will work with any theme, but we cannot guarantee the appearance will match that of the demo site.
 
 == Changelog ==
+
+= 1.4 - 2024-11-22 =
+* SECURITY: Sanitized and escaped shortcode attributes in the Accordion shortcode.
+* DEPRECATED: Marking the [memberlite_signup] shortcode as deprecated. Use the Signup Shortcode Add On for Paid Memberships Pro instead.
 
 = 1.3.9 - 2023-09-21 =
 * SECURITY: Sanitized and Escaped shortcode attributes and variables.

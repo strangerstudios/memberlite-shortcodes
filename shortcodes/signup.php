@@ -7,7 +7,7 @@
 */
 function memberlitesc_signup_shortcode($atts, $content=null, $code="")
 {
-	_doing_it_wrong( __FUNCTION__, __( 'The [memberlite_signup] shortcode is now deprecated. Please use the Signup Shortcode Add On for Paid Memberships Pro instead.', 'memberlite-shortcodes' ), '1.4' );
+	_doing_it_wrong( __FUNCTION__, esc_html__( 'The [memberlite_signup] shortcode is now deprecated. Please use the Signup Shortcode Add On for Paid Memberships Pro instead.', 'memberlite-shortcodes' ), '1.4' );
 
 	// Show a message to admins that the shortcode is deprecated.
 	if ( current_user_can ( 'manage_options' ) ) {
