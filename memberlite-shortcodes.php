@@ -1,18 +1,20 @@
 <?php
-/*
-Plugin Name: Memberlite Shortcodes
-Plugin URI: https://memberlitetheme.com/memberlite-shortcodes/
-Description: Shortcodes designed to work with the Memberlite Theme and Memberlite Child Themes.
-Version: 1.3.9
-Author: Stranger Studios
-Author URI: https://memberlitetheme.com
-Text Domain: memberlite-shortcodes
-Domain Path: /languages
+/**
+ * Plugin Name: Memberlite Shortcodes
+ * Plugin URI: https://memberlitetheme.com/memberlite-shortcodes/
+ * Description: Shortcodes designed to work with the Memberlite Theme and Memberlite Child Themes.
+ * Version: 1.4
+ * Author: Stranger Studios
+ * Author URI: https://memberlitetheme.com
+ * License: GPL-3.0-or-later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ * Text Domain: memberlite-shortcodes
+ * Domain Path: /languages
 */
 
 define( 'MEMBERLITESC_DIR', dirname( __FILE__ ) );
 define( 'MEMBERLITESC_URL', plugins_url( '', __FILE__ ) );
-define( 'MEMBERLITESC_VERSION', '1.3.9' );
+define( 'MEMBERLITESC_VERSION', '1.4' );
 
 /**
  * Load text domain
